@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم كرمل+</title>
+  <link rel="icon" type="image/png" href="../circle_dark_icon.png">
+  <link rel="apple-touch-icon" href="../circle_dark_icon.png">
+  <meta name="theme-color" content="#7c3aed">
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="dashboard-header">
+    <div class="header-content">
+      <div class="logo-section">
+        <img src="../images/full_logo (1).png" alt="Karmel Logo" class="dashboard-logo">
+        <h1>لوحة تحكم كرمل+</h1>
+      </div>
+      <div class="header-actions">
+        <div class="admin-info">
+          <span class="admin-name" id="adminName">مدير النظام</span>
+          <span class="admin-role">مدير</span>
+        </div>
+        <button class="logout-btn" id="logoutBtn">
+          <i class="fas fa-sign-out-alt"></i>
+          تسجيل خروج
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <nav class="sidebar-nav">
+        <ul class="nav-menu">
+          <li class="nav-item active">
+            <a href="#overview" class="nav-link" data-section="overview">
+              <i class="fas fa-tachometer-alt"></i>
+              <span>نظرة عامة</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#hero" class="nav-link" data-section="hero">
+              <i class="fas fa-home"></i>
+              <span>الصفحة الرئيسية</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link" data-section="about">
+              <i class="fas fa-info-circle"></i>
+              <span>من نحن</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#partners" class="nav-link" data-section="partners">
+              <i class="fas fa-handshake"></i>
+              <span>الشركاء</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#vision" class="nav-link" data-section="vision">
+              <i class="fas fa-eye"></i>
+              <span>الرؤية والمهمة</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#services" class="nav-link" data-section="services">
+              <i class="fas fa-cogs"></i>
+              <span>الخدمات</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#why-karmel" class="nav-link" data-section="why-karmel">
+              <i class="fas fa-question-circle"></i>
+              <span>لماذا كرمل+</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#policies" class="nav-link" data-section="policies">
+              <i class="fas fa-shield-alt"></i>
+              <span>السياسات</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link" data-section="contact">
+              <i class="fas fa-envelope"></i>
+              <span>معلومات التواصل</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="dashboard-main">
+      <!-- Overview Section -->
+      <section id="overview" class="dashboard-section active">
+        <div class="section-header">
+          <h2>نظرة عامة على الموقع</h2>
+          <p>إدارة جميع محتويات موقع كرمل+</p>
+        </div>
+        
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="partnersCount">13</h3>
+              <p>عدد الشركاء</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="servicesCount">5</h3>
+              <p>عدد الخدمات</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="feedbackCount">2</h3>
+              <p>آراء العملاء</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div class="stat-content">
+              <h3 id="visionCount">3</h3>
+              <p>عناصر الرؤية</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-actions">
+          <h3>إجراءات سريعة</h3>
+          <div class="actions-grid">
+            <button class="action-btn" onclick="showSection('hero')">
+              <i class="fas fa-edit"></i>
+              تعديل الصفحة الرئيسية
+            </button>
+            <button class="action-btn" onclick="showSection('partners')">
+              <i class="fas fa-plus"></i>
+              إضافة شريك جديد
+            </button>
+            <button class="action-btn" onclick="showSection('services')">
+              <i class="fas fa-cog"></i>
+              إدارة الخدمات
+            </button>
+            <button class="action-btn" onclick="showSection('feedback')">
+              <i class="fas fa-comment"></i>
+              إضافة رأي عميل
+            </button>
+            <button class="action-btn" onclick="updateMainSite()">
+              <i class="fas fa-sync-alt"></i>
+              تحديث الموقع الأساسي
+            </button>
+            <button class="action-btn" onclick="testSiteUpdate()">
+              <i class="fas fa-bug"></i>
+              اختبار التحديث
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hero Section -->
+      <section id="hero" class="dashboard-section">
+        <div class="section-header">
+          <h2>تعديل الصفحة الرئيسية</h2>
+          <p>تحديث محتوى القسم الرئيسي</p>
+        </div>
+        
+        <div class="content-editor">
+          <div class="form-group">
+            <label>العنوان الرئيسي</label>
+            <textarea id="heroTitle" class="form-control" rows="3">ودّع الإجراءات اليدوية وابدأ التحول الرقمي مع كرمل+</textarea>
+          </div>
+          
+          <div class="form-group">
+            <label>الوصف الأول</label>
+            <textarea id="heroDesc1" class="form-control" rows="3">نقدّم حلولاً ذكية تسرّع إدارة أعمالك وتزيد من دقتها وكفاءتها.</textarea>
+          </div>
+          
+          <div class="form-group">
+            <label>الوصف الثاني</label>
+            <textarea id="heroDesc2" class="form-control" rows="3">اختر كرمل+ لتجربة احترافية تسهّل عليك كل خطوة نحو المستقبل.</textarea>
+          </div>
+          
+          <div class="form-group">
+            <label>نص الزر</label>
+            <input type="text" id="heroButton" class="form-control" value="تواصل معنا">
+          </div>
+          
+          <div class="form-group">
+            <label>صورة جانبية</label>
+            <div class="image-upload">
+              <input type="file" id="heroImage" accept="image/*" class="file-input">
+              <div class="upload-area">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <span>اختر صورة جديدة</span>
+              </div>
+              <img id="heroImagePreview" src="../images/i14.png" alt="Hero Image" class="image-preview">
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="updateHero()">
+              <i class="fas fa-save"></i>
+              حفظ التغييرات
+            </button>
+            <button class="btn btn-secondary" onclick="resetHero()">
+              <i class="fas fa-undo"></i>
+              إعادة تعيين
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="dashboard-section">
+        <div class="section-header">
+          <h2>تعديل قسم "من نحن"</h2>
+          <p>تحديث معلومات الشركة</p>
+        </div>
+        
+        <div class="content-editor">
+          <div class="form-group">
+            <label>العنوان</label>
+            <input type="text" id="aboutTitle" class="form-control" value="كرمل: حلول برمجية ذكية بثقة واحتراف">
+          </div>
+          
+          <div class="form-group">
+            <label>الوصف</label>
+            <textarea id="aboutDesc" class="form-control" rows="8">نحن في كرمل فريق متخصص في تطوير البرمجيات وتصميم الحلول الرقمية الذكية التي تواكب متطلبات السوق وتواجه التحديات بثقة. نضم مطورين، مصممين، ومهندسي برمجيات يعملون بشغف واحد: تحويل الأفكار إلى حلول تقنية فعّالة. نبدأ بتحليل دقيق لاحتياجات العميل، وننفذ بعناية واحتراف، مع التزام كامل في كل مرحلة من مراحل المشروع — من التخطيط إلى الإطلاق وما بعده. نحرص على أن تكون تجربة التعاون معنا سلسة، مهنية، ومبنية على نتائج حقيقية وثقة تدوم.</textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="updateAbout()">
+              <i class="fas fa-save"></i>
+              حفظ التغييرات
+            </button>
+            <button class="btn btn-secondary" onclick="resetAbout()">
+              <i class="fas fa-undo"></i>
+              إعادة تعيين
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section -->
+      <section id="partners" class="dashboard-section">
+        <div class="section-header">
+          <h2>إدارة الشركاء</h2>
+          <p>إضافة، تعديل، وحذف الشركاء</p>
+          <button class="btn btn-primary" onclick="showAddPartnerModal()">
+            <i class="fas fa-plus"></i>
+            إضافة شريك جديد
+          </button>
+        </div>
+        
+        <div class="partners-grid" id="partnersGrid">
+          <!-- الشركاء سيتم تحميلهم ديناميكياً -->
+        </div>
+      </section>
+
+      <!-- Vision Section -->
+      <section id="vision" class="dashboard-section">
+        <div class="section-header">
+          <h2>تعديل الرؤية والمهمة والقيم</h2>
+          <p>تحديث العناصر الأساسية للشركة</p>
+        </div>
+        
+        <div class="vision-editor">
+          <div class="vision-card">
+            <h3>المهمة</h3>
+            <div class="form-group">
+              <label>النص</label>
+              <textarea id="missionText" class="form-control" rows="4">نبتكر حلولاً تقنية تصنع الفرق ونرافقك في كل خطوة من الفكرة حتى الإنجاز.</textarea>
+            </div>
+            <div class="form-group">
+              <label>الأيقونة</label>
+              <div class="icon-selector">
+                <input type="text" id="missionIcon" class="form-control" value="🎯" readonly>
+                <button type="button" class="icon-picker-btn" onclick="openIconPicker('missionIcon')">
+                  <i class="fas fa-palette"></i>
+                  اختيار أيقونة
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="vision-card">
+            <h3>الرؤية</h3>
+            <div class="form-group">
+              <label>النص</label>
+              <textarea id="visionText" class="form-control" rows="4">أن نصبح العلامة التقنية الأولى في القدس ونقود التحول الرقمي بابتكار حقيقي.</textarea>
+            </div>
+            <div class="form-group">
+              <label>الأيقونة</label>
+              <div class="icon-selector">
+                <input type="text" id="visionIcon" class="form-control" value="🌟" readonly>
+                <button type="button" class="icon-picker-btn" onclick="openIconPicker('visionIcon')">
+                  <i class="fas fa-palette"></i>
+                  اختيار أيقونة
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="vision-card">
+            <h3>القيم</h3>
+            <div class="form-group">
+              <label>النص</label>
+              <textarea id="valuesText" class="form-control" rows="4">الثقة، الشغف، الإبداع، والعمل بروح الفريق لتحقيق النجاح المشترك.</textarea>
+            </div>
+            <div class="form-group">
+              <label>الأيقونة</label>
+              <div class="icon-selector">
+                <input type="text" id="valuesIcon" class="form-control" value="💎" readonly>
+                <button type="button" class="icon-picker-btn" onclick="openIconPicker('valuesIcon')">
+                  <i class="fas fa-palette"></i>
+                  اختيار أيقونة
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="updateVision()">
+              <i class="fas fa-save"></i>
+              حفظ التغييرات
+            </button>
+            <button class="btn btn-secondary" onclick="resetVision()">
+              <i class="fas fa-undo"></i>
+              إعادة تعيين
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="dashboard-section">
+        <div class="section-header">
+          <h2>إدارة الخدمات</h2>
+          <p>تعديل الخدمات المقدمة</p>
+          <button class="btn btn-primary" onclick="showAddServiceModal()">
+            <i class="fas fa-plus"></i>
+            إضافة خدمة جديدة
+          </button>
+        </div>
+        
+        <div class="services-grid" id="servicesGrid">
+          <!-- الخدمات سيتم تحميلها ديناميكياً -->
+        </div>
+      </section>
+
+      <!-- Why Karmel Section -->
+      <section id="why-karmel" class="dashboard-section">
+        <div class="section-header">
+          <h2>تعديل قسم "لماذا كرمل+"</h2>
+          <p>تحديث محتوى قسم لماذا كرمل+</p>
+        </div>
+        
+        <div class="content-editor">
+          <div class="form-group">
+            <label>العنوان الرئيسي</label>
+            <input type="text" id="whyKarmelTitle" class="form-control" value="لماذا كرمل+؟">
+          </div>
+          
+          <div class="form-group">
+            <label>الوصف الفرعي</label>
+            <textarea id="whyKarmelSubtitle" class="form-control" rows="3">اكتشف الأسباب التي تجعلنا الخيار الأمثل لتحويل أفكارك إلى واقع رقمي متميز</textarea>
+          </div>
+          
+          <div class="why-karmel-cards">
+            <h3>بطاقات لماذا كرمل+</h3>
+            
+            <div class="why-karmel-card-editor">
+              <h4>البطاقة الأولى - سرعة في التنفيذ</h4>
+              <div class="form-group">
+                <label>الأيقونة</label>
+                <div class="icon-selector">
+                  <input type="text" id="whyKarmelIcon1" class="form-control" value="fas fa-rocket" readonly>
+                  <button type="button" class="icon-picker-btn" onclick="openIconPicker('whyKarmelIcon1')">
+                    <i class="fas fa-palette"></i>
+                    اختيار أيقونة
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>العنوان</label>
+                <input type="text" id="whyKarmelCardTitle1" class="form-control" value="سرعة في التنفيذ">
+              </div>
+              <div class="form-group">
+                <label>الوصف</label>
+                <textarea id="whyKarmelCardDesc1" class="form-control" rows="4">نحول أفكارك إلى واقع رقمي بسرعة قياسية مع الحفاظ على أعلى معايير الجودة والاحترافية. نستخدم أحدث التقنيات وأفضل الممارسات لضمان التسليم في الوقت المحدد.</textarea>
+              </div>
+              <div class="form-group">
+                <label>الإحصائية</label>
+                <input type="text" id="whyKarmelStat1" class="form-control" value="50%">
+              </div>
+              <div class="form-group">
+                <label>نص الإحصائية</label>
+                <input type="text" id="whyKarmelStatText1" class="form-control" value="أسرع من المنافسين">
+              </div>
+            </div>
+            
+            <div class="why-karmel-card-editor">
+              <h4>البطاقة الثانية - أمان وموثوقية</h4>
+              <div class="form-group">
+                <label>الأيقونة</label>
+                <div class="icon-selector">
+                  <input type="text" id="whyKarmelIcon2" class="form-control" value="fas fa-shield-alt" readonly>
+                  <button type="button" class="icon-picker-btn" onclick="openIconPicker('whyKarmelIcon2')">
+                    <i class="fas fa-palette"></i>
+                    اختيار أيقونة
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>العنوان</label>
+                <input type="text" id="whyKarmelCardTitle2" class="form-control" value="أمان وموثوقية">
+              </div>
+              <div class="form-group">
+                <label>الوصف</label>
+                <textarea id="whyKarmelCardDesc2" class="form-control" rows="4">نضمن أمان بياناتك ومشاريعك مع أحدث تقنيات الحماية والنسخ الاحتياطي التلقائي. نطبق معايير الأمان العالمية لحماية معلوماتك.</textarea>
+              </div>
+              <div class="form-group">
+                <label>الإحصائية</label>
+                <input type="text" id="whyKarmelStat2" class="form-control" value="99.9%">
+              </div>
+              <div class="form-group">
+                <label>نص الإحصائية</label>
+                <input type="text" id="whyKarmelStatText2" class="form-control" value="معدل الأمان">
+              </div>
+            </div>
+            
+            <div class="why-karmel-card-editor">
+              <h4>البطاقة الثالثة - فريق محترف</h4>
+              <div class="form-group">
+                <label>الأيقونة</label>
+                <div class="icon-selector">
+                  <input type="text" id="whyKarmelIcon3" class="form-control" value="fas fa-users" readonly>
+                  <button type="button" class="icon-picker-btn" onclick="openIconPicker('whyKarmelIcon3')">
+                    <i class="fas fa-palette"></i>
+                    اختيار أيقونة
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>العنوان</label>
+                <input type="text" id="whyKarmelCardTitle3" class="form-control" value="فريق محترف">
+              </div>
+              <div class="form-group">
+                <label>الوصف</label>
+                <textarea id="whyKarmelCardDesc3" class="form-control" rows="4">فريق من المطورين المحترفين ذوي الخبرة العالية في أحدث التقنيات وأفضل الممارسات. خبرة تزيد عن 10 سنوات في مجال التطوير.</textarea>
+              </div>
+              <div class="form-group">
+                <label>الإحصائية</label>
+                <input type="text" id="whyKarmelStat3" class="form-control" value="10+">
+              </div>
+              <div class="form-group">
+                <label>نص الإحصائية</label>
+                <input type="text" id="whyKarmelStatText3" class="form-control" value="سنوات خبرة">
+              </div>
+            </div>
+            
+            <div class="why-karmel-card-editor">
+              <h4>البطاقة الرابعة - دعم مستمر</h4>
+              <div class="form-group">
+                <label>الأيقونة</label>
+                <div class="icon-selector">
+                  <input type="text" id="whyKarmelIcon4" class="form-control" value="fas fa-headset" readonly>
+                  <button type="button" class="icon-picker-btn" onclick="openIconPicker('whyKarmelIcon4')">
+                    <i class="fas fa-palette"></i>
+                    اختيار أيقونة
+                  </button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>العنوان</label>
+                <input type="text" id="whyKarmelCardTitle4" class="form-control" value="دعم مستمر">
+              </div>
+              <div class="form-group">
+                <label>الوصف</label>
+                <textarea id="whyKarmelCardDesc4" class="form-control" rows="4">نقدم دعم فني مستمر وخدمة عملاء متميزة قبل وأثناء وبعد تسليم المشروع. فريق دعم متاح على مدار الساعة.</textarea>
+              </div>
+              <div class="form-group">
+                <label>الإحصائية</label>
+                <input type="text" id="whyKarmelStat4" class="form-control" value="24/7">
+              </div>
+              <div class="form-group">
+                <label>نص الإحصائية</label>
+                <input type="text" id="whyKarmelStatText4" class="form-control" value="دعم متواصل">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="updateWhyKarmel()">
+              <i class="fas fa-save"></i>
+              حفظ التغييرات
+            </button>
+            <button class="btn btn-secondary" onclick="resetWhyKarmel()">
+              <i class="fas fa-undo"></i>
+              إعادة تعيين
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Policies Section -->
+      <section id="policies" class="dashboard-section">
+        <div class="section-header">
+          <h2>إدارة السياسات</h2>
+          <p>تعديل سياسة الخصوصية والشروط والأحكام</p>
+        </div>
+        
+        <div class="policies-editor">
+          <div class="policy-tabs">
+            <button class="policy-tab active" onclick="showPolicyTab('privacy')">سياسة الخصوصية</button>
+            <button class="policy-tab" onclick="showPolicyTab('terms')">الشروط والأحكام</button>
+          </div>
+          
+          <div id="privacy-policy" class="policy-content active">
+            <h3>سياسة الخصوصية</h3>
+            <div class="form-group">
+              <label>العنوان</label>
+              <input type="text" id="privacyTitle" class="form-control" value="سياسة الخصوصية">
+            </div>
+            
+            <div class="form-group">
+              <label>المقدمة</label>
+              <textarea id="privacyIntro" class="form-control" rows="4">نحن في شركة كرمل+ نلتزم بحماية خصوصية زوارنا وعملائنا الكرام. تشرح هذه السياسة الشاملة كيفية جمع واستخدام وحماية المعلومات الشخصية التي تقدمها لنا.</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>المعلومات التي نجمعها</label>
+              <textarea id="privacyInfoCollected" class="form-control" rows="6">نجمع المعلومات التي تقدمها لنا مباشرة مثل:
+• الاسم الكامل ومعلومات الاتصال
+• البريد الإلكتروني ورقم الهاتف
+• معلومات الشركة أو المؤسسة
+• تفاصيل المشروع والخدمات المطلوبة</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>كيفية استخدام المعلومات</label>
+              <textarea id="privacyInfoUsage" class="form-control" rows="6">نستخدم المعلومات التي نجمعها للأغراض التالية:
+• تقديم خدماتنا المتميزة والرد على استفساراتك
+• تحسين تجربتك معنا وتطوير خدماتنا
+• إرسال التحديثات والعروض الخاصة
+• ضمان الأمان والامتثال للقوانين</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>حماية المعلومات</label>
+              <textarea id="privacyProtection" class="form-control" rows="6">نطبق أحدث إجراءات الأمان لحماية معلوماتك الشخصية:
+• تشفير البيانات باستخدام تقنيات SSL متقدمة
+• حماية من الوصول غير المصرح به
+• نسخ احتياطية منتظمة وآمنة
+• مراقبة مستمرة للأنظمة الأمنية</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>مشاركة المعلومات</label>
+              <textarea id="privacySharing" class="form-control" rows="4">نلتزم بعدم مشاركة معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:
+• بموافقتك الصريحة والكتابية
+• عندما يقتضي القانون ذلك
+• لحماية حقوقنا أو حقوق الآخرين</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>حقوقك</label>
+              <textarea id="privacyRights" class="form-control" rows="5">لديك الحقوق التالية فيما يتعلق بمعلوماتك الشخصية:
+• الوصول إلى معلوماتك وتحديثها
+• حذف معلوماتك عند الطلب
+• الاعتراض على معالجة معلوماتك
+• نقل معلوماتك إلى مزود خدمة آخر</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>التحديثات</label>
+              <textarea id="privacyUpdates" class="form-control" rows="3">قد نحدث هذه السياسة من وقت لآخر لتعكس التغييرات في ممارساتنا أو اللوائح القانونية. سنقوم بإشعارك بأي تغييرات جوهرية عبر البريد الإلكتروني أو إشعار على موقعنا.</textarea>
+            </div>
+          </div>
+          
+          <div id="terms-policy" class="policy-content">
+            <h3>الشروط والأحكام</h3>
+            <div class="form-group">
+              <label>العنوان</label>
+              <input type="text" id="termsTitle" class="form-control" value="الشروط والأحكام">
+            </div>
+            
+            <div class="form-group">
+              <label>قبول الشروط</label>
+              <textarea id="termsAcceptance" class="form-control" rows="3">باستخدام خدمات كرمل+، فإنك توافق على هذه الشروط والأحكام الشاملة. إذا كنت لا توافق على أي جزء منها، يرجى عدم استخدام خدماتنا.</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>الخدمات المقدمة</label>
+              <textarea id="termsServices" class="form-control" rows="6">نقدم مجموعة شاملة من الخدمات التقنية المتقدمة:
+• تطوير البرمجيات والمواقع الإلكترونية
+• تطوير التطبيقات المحمولة والويب
+• تصميم واجهات المستخدم (UI/UX)
+• تكامل الأنظمة والخدمات السحابية
+• الدعم الفني والصيانة</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>التزاماتنا</label>
+              <textarea id="termsCommitments" class="form-control" rows="5">نلتزم بتقديم خدمات عالية الجودة مع:
+• الالتزام بالمواصفات المتفق عليها
+• التسليم في الوقت المحدد
+• الدعم الفني المستمر
+• الشفافية في جميع مراحل المشروع</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>المدفوعات والرسوم</label>
+              <textarea id="termsPayments" class="form-control" rows="5">يتم تحديد أسعار خدماتنا مسبقاً وتوضيحها في العروض المقدمة:
+• الدفع المسبق بنسبة 50% عند بدء المشروع
+• الدفع النهائي عند تسليم المشروع
+• الدفع عبر وسائل آمنة ومقبولة
+• فواتير واضحة ومفصلة</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>الملكية الفكرية</label>
+              <textarea id="termsIntellectual" class="form-control" rows="5">نحترم حقوق الملكية الفكرية ونضمن:
+• انتقال جميع حقوق المشروع للعميل بعد الدفع النهائي
+• الاحتفاظ بحقوقنا في التقنيات والأدوات المستخدمة
+• عدم استخدام محتوى العميل لأغراض أخرى
+• حماية سرية المعلومات والبيانات</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>السرية وحماية البيانات</label>
+              <textarea id="termsConfidentiality" class="form-control" rows="5">نلتزم بحماية سرية معلومات العميل من خلال:
+• عدم مشاركة المعلومات مع أطراف ثالثة
+• تطبيق إجراءات أمنية صارمة
+• توقيع اتفاقيات السرية مع الموظفين
+• حماية البيانات وفقاً للقوانين المعمول بها</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>المسؤولية والضمانات</label>
+              <textarea id="termsLiability" class="form-control" rows="5">نلتزم بتقديم خدمات عالية الجودة مع ضمانات محدودة:
+• ضمان عمل المشروع وفقاً للمواصفات المتفق عليها
+• دعم فني مجاني لمدة 3 أشهر بعد التسليم
+• مسؤولية محدودة بقيمة المشروع المتفق عليها
+• عدم ضمان عدم وجود أخطاء برمجية</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>إنهاء الخدمة</label>
+              <textarea id="termsTermination" class="form-control" rows="5">يمكن إنهاء الخدمة من قبل أي من الطرفين:
+• بإشعار مسبق كتابي لمدة 30 يوماً
+• في حالة عدم الالتزام بالشروط
+• تسوية المدفوعات والالتزامات المتبقية
+• تسليم العمل المنجز حتى تاريخ الإنهاء</textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>القانون المطبق وحل النزاعات</label>
+              <textarea id="termsLaw" class="form-control" rows="4">تخضع هذه الشروط لقانون فلسطين ويتم حل النزاعات من خلال:
+• المحادثات الودية والتفاوض المباشر
+• الوساطة من قبل طرف محايد
+• المحاكم المختصة في فلسطين</textarea>
+            </div>
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="updatePolicies()">
+              <i class="fas fa-save"></i>
+              حفظ التغييرات
+            </button>
+            <button class="btn btn-secondary" onclick="resetPolicies()">
+              <i class="fas fa-undo"></i>
+              إعادة تعيين
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="dashboard-section">
+        <div class="section-header">
+          <h2>معلومات التواصل</h2>
+          <p>تحديث بيانات التواصل</p>
+        </div>
+        
+        <div class="content-editor">
+          <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="text" id="contactPhone" class="form-control" value="+972 58-630-0009">
+          </div>
+          
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" id="contactEmail" class="form-control" value="support@karmelplus.com">
+          </div>
+          
+          <div class="form-group">
+            <label>العنوان</label>
+            <input type="text" id="contactAddress" class="form-control" value="شعفاط، القدس">
+          </div>
+          
+          <div class="form-group">
+            <label>رابط الخريطة</label>
+            <input type="text" id="contactMap" class="form-control" value="https://www.google.com/maps?q=Jerusalem%2C%20Shuafat&output=embed">
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="updateContact()">
+              <i class="fas fa-save"></i>
+              حفظ التغييرات
+            </button>
+            <button class="btn btn-secondary" onclick="resetContact()">
+              <i class="fas fa-undo"></i>
+              إعادة تعيين
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Modals -->
+  <!-- Add Partner Modal -->
+  <div id="addPartnerModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>إضافة شريك جديد</h3>
+        <span class="close" onclick="closeModal('addPartnerModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>اسم الشريك</label>
+          <input type="text" id="newPartnerName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>نوع الشريك</label>
+          <input type="text" id="newPartnerType" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>صورة الشريك</label>
+          <input type="file" id="newPartnerImage" accept="image/*" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('addPartnerModal')">إلغاء</button>
+        <button class="btn btn-primary" onclick="addPartner()">إضافة</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Service Modal -->
+  <div id="addServiceModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>إضافة خدمة جديدة</h3>
+        <span class="close" onclick="closeModal('addServiceModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>اسم الخدمة</label>
+          <input type="text" id="newServiceName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>أيقونة الخدمة</label>
+          <div class="icon-selector">
+            <input type="text" id="newServiceIcon" class="form-control" placeholder="مثال: 🗂️" readonly>
+            <button type="button" class="icon-picker-btn" onclick="openIconPicker('newServiceIcon')">
+              <i class="fas fa-palette"></i>
+              اختيار أيقونة
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('addServiceModal')">إلغاء</button>
+        <button class="btn btn-primary" onclick="addService()">إضافة</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Service Modal -->
+  <div id="editServiceModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>تعديل الخدمة</h3>
+        <span class="close" onclick="closeModal('editServiceModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="editServiceIndex">
+        <div class="form-group">
+          <label>اسم الخدمة</label>
+          <input type="text" id="editServiceName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>أيقونة الخدمة</label>
+          <div class="icon-selector">
+            <input type="text" id="editServiceIcon" class="form-control" placeholder="مثال: 🗂️" readonly>
+            <button type="button" class="icon-picker-btn" onclick="openIconPicker('editServiceIcon')">
+              <i class="fas fa-palette"></i>
+              اختيار أيقونة
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('editServiceModal')">إلغاء</button>
+        <button class="btn btn-primary" onclick="updateService()">تحديث</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Feedback Modal -->
+  <div id="addFeedbackModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>إضافة رأي عميل جديد</h3>
+        <span class="close" onclick="closeModal('addFeedbackModal')">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>اسم العميل</label>
+          <input type="text" id="newFeedbackName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>الشركة</label>
+          <input type="text" id="newFeedbackCompany" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>الرأي</label>
+          <textarea id="newFeedbackText" class="form-control" rows="4"></textarea>
+        </div>
+        <div class="form-group">
+          <label>صورة العميل</label>
+          <input type="file" id="newFeedbackImage" accept="image/*" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('addFeedbackModal')">إلغاء</button>
+        <button class="btn btn-primary" onclick="addFeedback()">إضافة</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Icon Picker Modal -->
+  <div id="iconPickerModal" class="modal">
+    <div class="modal-content icon-picker-modal">
+      <div class="modal-header">
+        <h3>اختيار أيقونة</h3>
+        <span class="close" onclick="closeIconPicker()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <div class="icon-search">
+          <input type="text" id="iconSearch" class="form-control" placeholder="البحث عن أيقونة...">
+        </div>
+        <div class="icon-categories">
+          <button class="category-btn active" onclick="filterIcons('all')">الكل</button>
+          <button class="category-btn" onclick="filterIcons('business')">الأعمال</button>
+          <button class="category-btn" onclick="filterIcons('technology')">التقنية</button>
+          <button class="category-btn" onclick="filterIcons('communication')">التواصل</button>
+          <button class="category-btn" onclick="filterIcons('security')">الأمان</button>
+          <button class="category-btn" onclick="filterIcons('success')">النجاح</button>
+          <button class="category-btn" onclick="filterIcons('emoji')">الإيموجي</button>
+        </div>
+        <div class="icons-grid" id="iconsGrid">
+          <!-- الأيقونات ستتم إضافتها ديناميكياً -->
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeIconPicker()">إلغاء</button>
+        <button class="btn btn-primary" onclick="confirmIconSelection()">تأكيد الاختيار</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success/Error Messages -->
+  <div id="messageContainer" class="message-container"></div>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-spinner"></div>
+  </div>
+
+  <script src="site-updater.js"></script>
+  <script src="dashboard-script.js"></script>
+</body>
+</html> 

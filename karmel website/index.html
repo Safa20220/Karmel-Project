@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karmel+</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mobile.css" />
+  <link rel="icon" type="image/png" href="images/circle_dark_icon.png">
+  <link rel="apple-touch-icon" href="images/circle_dark_icon.png">
+  <meta name="theme-color" content="#7c3aed">
+
+  <!-- Font Awesome CDN for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Fixed Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <div class="header-actions">
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="header-nav">
+        <ul class="nav-list" id="navList">
+          <li><a class="nav-link active" href="#home">الرئيسية</a></li>
+          <li><a class="nav-link" href="#about">من نحن</a></li>
+          <li><a class="nav-link" href="#vision-mission-values">رؤيتنا، مهمتنا، قيمنا</a></li>
+          <li><a class="nav-link" href="#services">خدماتنا</a></li>
+          <li><a class="nav-link" href="#contact">تواصل معنا</a></li>
+        </ul>
+      </nav>
+      <a href="#home" class="logo-link">
+      <img src="images/full_logo (1).png" alt="Karmel Logo" class="karmel-logo">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section active-section">
+      <div class="hero-hero-container">
+        <div class="hero-hero-bg">
+          <div class="icon-cloud">
+            <!-- React -->
+            <div class="icon react-icon" style="top:12%;left:10%"><svg width="48" height="48" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" fill="#61DAFB"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="#61DAFB" stroke-width="2"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="#61DAFB" stroke-width="2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" fill="none" stroke="#61DAFB" stroke-width="2" transform="rotate(120 12 12)"/></svg></div>
+            <!-- Java -->
+            <div class="icon java-icon" style="top:30%;left:25%"><svg width="48" height="48" viewBox="0 0 24 24"><ellipse cx="12" cy="19" rx="7" ry="2" fill="#5382A1"/><path d="M12 2c2 2 4 4 0 8s-2 6 0 8" stroke="#E76F00" stroke-width="2" fill="none"/></svg></div>
+            <!-- Python -->
+            <div class="icon python-icon" style="top:60%;left:15%"><svg width="48" height="48" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#306998"/><text x="12" y="18" text-anchor="middle" font-size="12" font-family="Arial" fill="#FFD43B">Py</text></svg></div>
+            <!-- JavaScript -->
+            <div class="icon js-icon" style="top:20%;left:70%"><svg width="48" height="48" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#F7DF1E"/><text x="12" y="18" text-anchor="middle" font-size="12" font-family="Arial" fill="#222">JS</text></svg></div>
+            <!-- TypeScript -->
+            <div class="icon ts-icon" style="top:55%;left:60%"><svg width="48" height="48" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#3178C6"/><text x="12" y="18" text-anchor="middle" font-size="12" font-family="Arial" fill="#fff">TS</text></svg></div>
+            <!-- Node.js -->
+            <div class="icon node-icon" style="top:75%;left:80%"><svg width="48" height="48" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#3C873A"/><text x="12" y="17" text-anchor="middle" font-size="10" font-family="Arial" fill="#fff">Node</text></svg></div>
+            <!-- Vue -->
+            <div class="icon vue-icon" style="top:10%;left:40%"><svg width="48" height="48" viewBox="0 0 24 24"><path d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78L24 1.61zM2.4 3.61h5.66L12 10.86l3.94-7.25h5.66L12 18.39 2.4 3.61z" fill="#4FC08D"/></svg></div>
+            <!-- Angular -->
+            <div class="icon angular-icon" style="top:40%;left:80%"><svg width="48" height="48" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#DD0031" stroke-width="2"/></svg></div>
+            <!-- PHP -->
+            <div class="icon php-icon" style="top:80%;left:30%"><svg width="48" height="48" viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="10" ry="7" fill="#8993BE"/><text x="12" y="16" text-anchor="middle" font-size="10" font-family="Arial" fill="#fff">PHP</text></svg></div>
+            <!-- C# -->
+            <div class="icon csharp-icon" style="top:35%;left:55%"><svg width="48" height="48" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#68217A"/><text x="12" y="18" text-anchor="middle" font-size="12" font-family="Arial" fill="#fff">C#</text></svg></div>
+            <!-- Git -->
+            <div class="icon git-icon" style="top:15%;left:85%"><svg width="48" height="48" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#F05032"/><circle cx="8" cy="16" r="2" fill="#fff"/><circle cx="16" cy="8" r="2" fill="#fff"/><circle cx="16" cy="16" r="2" fill="#fff"/><path d="M8 16L16 8M16 8V16" stroke="#fff" stroke-width="1.5"/></svg></div>
+            <!-- Docker -->
+            <div class="icon docker-icon" style="top:70%;left:50%"><svg width="48" height="48" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#2496ED"/><rect x="6" y="14" width="12" height="3" fill="#fff"/><rect x="8" y="11" width="2" height="3" fill="#fff"/><rect x="11" y="11" width="2" height="3" fill="#fff"/><rect x="14" y="11" width="2" height="3" fill="#fff"/></svg></div>
+            <!-- Swift -->
+            <div class="icon swift-icon" style="top:85%;left:10%"><svg width="48" height="48" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" fill="none" stroke="#FF6B35" stroke-width="2"/></svg></div>
+            <!-- Kotlin -->
+            <div class="icon kotlin-icon" style="top:50%;left:90%"><svg width="48" height="48" viewBox="0 0 24 24"><rect width="24" height="24" rx="5" fill="#7F52FF"/><text x="12" y="18" text-anchor="middle" font-size="12" font-family="Arial" fill="#fff">Kt</text></svg></div>
+          </div>
+        </div>
+        <div class="hero-simple-row">
+          <div class="hero-simple-col-right">
+            <img src="images/i14.png" alt="Karmel Illustration" class="hero-side-img">
+          </div>
+          <div class="hero-simple-col-left">
+            <h1 class="hero-main-title fade-in-up" style="font-family:'Almarai',sans-serif;font-size:1.5rem;font-weight:800;color:#7c3aed;margin-bottom:0.8rem;line-height:1.5;animation:fadeInPhrase 1s both;">ودّع الإجراءات اليدوية وابدأ التحول الرقمي مع كرمل+</h1>
+            <p class="hero-main-desc fade-in-up" style="font-family:'Almarai',sans-serif;font-size:1.05rem;color:#444;font-weight:500;margin-bottom:0.7rem;line-height:2;animation:fadeInPhrase 1.3s both;">نقدّم حلولاً ذكية تسرّع إدارة أعمالك وتزيد من دقتها وكفاءتها.</p>
+            <p class="hero-main-desc fade-in-up" style="font-family:'Almarai',sans-serif;font-size:1rem;color:#7c3aed;font-weight:700;margin-bottom:1.1rem;line-height:2;animation:fadeInPhrase 1.6s both;">اختر كرمل+ لتجربة احترافية تسهّل عليك كل خطوة نحو المستقبل.</p>
+            <a href="#contact" class="hero-main-btn fade-in-up" style="font-family:'Almarai',sans-serif;animation:fadeInPhrase 2s both;">تواصل معنا</a>
+          </div>
+        </div>
+        <div class="hero-bg-circle"></div>
+        <div class="hero-bg-abstract-circle circle1"></div>
+        <div class="hero-bg-abstract-circle circle2"></div>
+        <div class="hero-bg-abstract-circle circle3"></div>
+        <div class="hero-dot dot1"></div>
+        <div class="hero-dot dot2"></div>
+        <div class="hero-dot dot3"></div>
+        <div class="hero-dot dot4"></div>
+      </div>
+    </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-modern-section">
+      <div class="about-modern-row">
+        <div class="about-modern-img-col">
+          </div>
+        <div class="about-modern-content-col">
+          <h2 class="about-section-title" style="font-size:2.2rem;font-weight:900;color:#7c3aed;font-family:'Almarai',sans-serif;margin-bottom:1.5rem;letter-spacing:0.5px;">من نحن</h2>
+          <div class="about-modern-desc fade-in-section" style="max-width: 700px; margin: 90px auto 0 auto; text-align: center; padding: 0 12px; position:relative;">
+            <!-- زخرفة يمين -->
+            <svg class="side-decor-svg right" width="80" height="300" viewBox="0 0 80 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;right:-90px;z-index:1;pointer-events:none;">
+              <path d="M10 10 Q70 60 10 110 Q70 160 10 210 Q70 260 10 290" stroke="#7C3AED" stroke-width="3" fill="none" opacity="0.13"/>
+            </svg>
+            <!-- زخرفة يسار -->
+            <svg class="side-decor-svg left" width="80" height="300" viewBox="0 0 80 300" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;top:0;left:-90px;z-index:1;pointer-events:none;">
+              <path d="M70 10 Q10 60 70 110 Q10 160 70 210 Q10 260 70 290" stroke="#7C3AED" stroke-width="3" fill="none" opacity="0.13"/>
+            </svg>
+            <p style="font-size:1.08rem; color:#666; font-weight:400; line-height:2.1; font-family: 'Almarai', sans-serif; margin: 0 auto; max-width: 600px;">نحن في كرمل فريق متخصص في تطوير البرمجيات وتصميم الحلول الرقمية الذكية التي تواكب متطلبات السوق وتواجه التحديات بثقة. نضم مطورين، مصممين، ومهندسي برمجيات يعملون بشغف واحد: تحويل الأفكار إلى حلول تقنية فعّالة. نبدأ بتحليل دقيق لاحتياجات العميل، وننفذ بعناية واحتراف، مع التزام كامل في كل مرحلة من مراحل المشروع — من التخطيط إلى الإطلاق وما بعده. نحرص على أن تكون تجربة التعاون معنا سلسة، مهنية، ومبنية على نتائج حقيقية وثقة تدوم.</p>
+          </div>
+   
+        </div>
+      </div>
+    </section>
+
+    <section id="partners" class="partners-carousel-section">
+  <h2 class="partners-title">شركائنا</h2>
+  <div class="partners-carousel">
+    <div class="partners-track">
+      <!-- العناصر 1 إلى 13 -->
+      <div class="partner-item">
+        <img src="images/i1.png" alt="شريك 1">
+        <div class="partner-name">019</div>
+        <div class="partner-type">شركة اتصالات</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i2.png" alt="شريك 2">
+        <div class="partner-name">Hallo 015</div>
+        <div class="partner-type">شركة اتصالات</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i3.png" alt="شريك 3">
+        <div class="partner-name">Tranzilla</div>
+        <div class="partner-type">بوابة دفع</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i4.png" alt="شريك 4">
+        <div class="partner-name">freeRadius</div>
+        <div class="partner-type">سيرفر راديوس</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i5.png" alt="شريك 5">
+        <div class="partner-name">ريووحيت online</div>
+        <div class="partner-type">برنامج محاسبة</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i6.png" alt="شريك 6">
+        <div class="partner-name">Priority</div>
+        <div class="partner-type">برنامج ERP</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i7.png" alt="شريك 7">
+        <div class="partner-name">Golan</div>
+        <div class="partner-type">شركة اتصالات</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i8.png" alt="شريك 8">
+        <div class="partner-name">Cellcom</div>
+        <div class="partner-type">شركة اتصالات</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i9.png" alt="شريك 9">
+        <div class="partner-name">We4g</div>
+        <div class="partner-type">شركة اتصالات</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i10.png" alt="شريك 10">
+        <div class="partner-name">Pelephone</div>
+        <div class="partner-type">شركة اتصالات</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i11.png" alt="شريك 11">
+        <div class="partner-name">Partner</div>
+        <div class="partner-type">شركة اتصالات</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i12.png" alt="شريك 12">
+        <div class="partner-name">Hot</div>
+        <div class="partner-type">شركة اتصالات</div>
+      </div>
+      <div class="partner-item">
+        <img src="images/i13.png" alt="شريك 13">
+        <div class="partner-name">OpenOLT</div>
+        <div class="partner-type">واجهة OLT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="vision-mission-values" class="infographic-section">
+        <div class="infographic-title section-title-main">
+          <span class="ar">رؤيتنا، مهمتنا، قيمنا</span>
+          <span class="en" style="display:none;">Vision, Mission, Values</span>
+        </div>
+        <div class="infographic-row">
+          <div class="infographic-card mission-card">
+            <div class="infographic-corner"></div>
+            <div class="infographic-icon">🎯</div>
+            <div class="infographic-card-title">
+              <span class="ar">مهمتنا</span>
+              <span class="en" style="display:none;">Our Mission</span>
+            </div>
+            <div class="infographic-card-desc">
+              <span class="ar">نبتكر حلولاً تقنية تصنع الفرق ونرافقك في كل خطوة من الفكرة حتى الإنجاز.</span>
+              <span class="en" style="display:none;">We innovate technical solutions that make a difference and accompany you in every step from idea to achievement.</span>
+            </div>
+          </div>
+          <div class="infographic-card vision-card">
+            <div class="infographic-corner"></div>
+            <div class="infographic-icon">🌟</div>
+            <div class="infographic-card-title">
+              <span class="ar">رؤيتنا</span>
+              <span class="en" style="display:none;">Our Vision</span>
+            </div>
+            <div class="infographic-card-desc">
+              <span class="ar">أن نصبح العلامة التقنية الأولى في القدس ونقود التحول الرقمي بابتكار حقيقي.</span>
+              <span class="en" style="display:none;">To become the leading technology brand in Jerusalem and lead digital transformation with true innovation.</span>
+            </div>
+          </div>
+          <div class="infographic-card values-card">
+            <div class="infographic-corner"></div>
+            <div class="infographic-icon">💎</div>
+            <div class="infographic-card-title">
+              <span class="ar">قيمنا</span>
+              <span class="en" style="display:none;">Our Values</span>
+            </div>
+            <div class="infographic-card-desc">
+              <span class="ar">الثقة، الشغف، الإبداع، والعمل بروح الفريق لتحقيق النجاح المشترك.</span>
+              <span class="en" style="display:none;">Trust, passion, creativity, and teamwork to achieve shared success.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-modern-wave">
+      <h2 class="services-modern-title" style="font-size:1.5rem;text-align:center;">مع الكرمل احصل على أفضل الخدمات التقنية</h2>
+      <p class="services-modern-desc" style="font-size:1.18rem;color:#555;margin-bottom:2.2rem;max-width:600px;margin-left:auto;margin-right:auto;">مجموعة من الحلول التقنية المتكاملة لدعم نجاح أعمالكم وتطويرها باحترافية.</p>
+      <div class="services-modern-wave-bg"></div>
+      <div class="services-modern-list">
+        <div class="service-modern-item">
+          <div class="service-modern-circle"><span>🗂️</span></div>
+          <div class="service-modern-label">نظام إدارة العملاء (CRM)</div>
+        </div>
+        <div class="service-modern-item">
+          <div class="service-modern-circle"><span>🛠️</span></div>
+          <div class="service-modern-label">دعم فني</div>
+          </div>
+        <div class="service-modern-item">
+          <div class="service-modern-circle"><span>💡</span></div>
+          <div class="service-modern-label">استشارة تقنية</div>
+          </div>
+        <div class="service-modern-item">
+          <div class="service-modern-circle"><span>🔗</span></div>
+          <div class="service-modern-label">تكامل الأنظمة</div>
+        </div>
+        <div class="service-modern-item">
+          <div class="service-modern-circle"><span>🎓</span></div>
+          <div class="service-modern-label">تدريب الموظفين</div>
+        </div>
+        <!-- زخرفة خط موجي SVG -->
+        <svg class="services-modern-svg" viewBox="0 0 900 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 60 Q150 10 300 60 T600 60 T900 60" stroke="#7c3aed" stroke-width="6" fill="none" opacity="0.13"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Why Karmel+ Section -->
+    <section id="why-karmel" class="why-karmel-section">
+      <div class="why-karmel-container">
+        <div class="why-karmel-header">
+        <h2 class="section-title-main">
+            <span class="ar">لماذا كرمل+؟</span>
+            <span class="en" style="display:none;">Why Karmel+?</span>
+        </h2>
+          <p class="why-karmel-subtitle">
+            <span class="ar">اكتشف الأسباب التي تجعلنا الخيار الأمثل لتحويل أفكارك إلى واقع رقمي متميز</span>
+            <span class="en" style="display:none;">Discover the reasons that make us the optimal choice for transforming your ideas into an outstanding digital reality</span>
+          </p>
+        </div>
+        
+        <div class="why-karmel-grid">
+          <div class="why-karmel-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="why-karmel-icon">
+              <i class="fas fa-rocket"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <h3 class="why-karmel-title">
+              <span class="ar">سرعة في التنفيذ</span>
+              <span class="en" style="display:none;">Fast Execution</span>
+            </h3>
+            <p class="why-karmel-desc">
+              <span class="ar">نحول أفكارك إلى واقع رقمي بسرعة قياسية مع الحفاظ على أعلى معايير الجودة والاحترافية. نستخدم أحدث التقنيات وأفضل الممارسات لضمان التسليم في الوقت المحدد.</span>
+              <span class="en" style="display:none;">We transform your ideas into digital reality at record speed while maintaining the highest standards of quality and professionalism. We use the latest technologies and best practices to ensure delivery on time.</span>
+            </p>
+            <div class="why-karmel-stats">
+              <div class="stat-item">
+                <span class="stat-number">50%</span>
+                <span class="stat-label">أسرع من المنافسين</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="why-karmel-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="why-karmel-icon">
+              <i class="fas fa-shield-alt"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <h3 class="why-karmel-title">
+              <span class="ar">أمان وموثوقية</span>
+              <span class="en" style="display:none;">Security & Reliability</span>
+            </h3>
+            <p class="why-karmel-desc">
+              <span class="ar">نضمن أمان بياناتك ومشاريعك مع أحدث تقنيات الحماية والنسخ الاحتياطي التلقائي. نطبق معايير الأمان العالمية لحماية معلوماتك.</span>
+              <span class="en" style="display:none;">We ensure the security of your data and projects with the latest protection technologies and automatic backup. We apply global security standards to protect your information.</span>
+            </p>
+            <div class="why-karmel-stats">
+              <div class="stat-item">
+                <span class="stat-number">99%</span>
+                <span class="stat-label">معدل الأمان</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="why-karmel-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="why-karmel-icon">
+              <i class="fas fa-users"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <h3 class="why-karmel-title">
+              <span class="ar">فريق محترف</span>
+              <span class="en" style="display:none;">Professional Team</span>
+            </h3>
+            <p class="why-karmel-desc">
+              <span class="ar">فريق من المطورين المحترفين ذوي الخبرة العالية في أحدث التقنيات وأفضل الممارسات. خبرة تزيد عن 10 سنوات في مجال التطوير.</span>
+              <span class="en" style="display:none;">A team of professional developers with high experience in the latest technologies and best practices. Over 10 years of experience in development.</span>
+            </p>
+            <div class="why-karmel-stats">
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">سنوات خبرة</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="why-karmel-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="why-karmel-icon">
+              <i class="fas fa-headset"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <h3 class="why-karmel-title">
+              <span class="ar">دعم مستمر</span>
+              <span class="en" style="display:none;">Continuous Support</span>
+            </h3>
+            <p class="why-karmel-desc">
+              <span class="ar">نقدم دعم فني مستمر وخدمة عملاء متميزة قبل وأثناء وبعد تسليم المشروع. فريق دعم متاح على مدار الساعة.</span>
+              <span class="en" style="display:none;">We provide continuous technical support and excellent customer service before, during and after project delivery. Support team available 24/7.</span>
+            </p>
+            <div class="why-karmel-stats">
+              <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">دعم متواصل</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="why-karmel-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="why-karmel-icon">
+              <i class="fas fa-lightbulb"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <h3 class="why-karmel-title">
+              <span class="ar">حلول مبتكرة</span>
+              <span class="en" style="display:none;">Innovative Solutions</span>
+            </h3>
+            <p class="why-karmel-desc">
+              <span class="ar">نبتكر حلولاً تقنية فريدة تناسب احتياجاتك الخاصة وتساعدك على تحقيق أهدافك. نستخدم أحدث التقنيات والذكاء الاصطناعي.</span>
+              <span class="en" style="display:none;">We create unique technical solutions that suit your specific needs and help you achieve your goals. We use the latest technologies and artificial intelligence.</span>
+            </p>
+            <div class="why-karmel-stats">
+              <div class="stat-item">
+                <span class="stat-number">100+</span>
+                <span class="stat-label">مشروع مبتكر</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="why-karmel-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="why-karmel-icon">
+              <i class="fas fa-chart-line"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <h3 class="why-karmel-title">
+              <span class="ar">نتائج مضمونة</span>
+              <span class="en" style="display:none;">Guaranteed Results</span>
+            </h3>
+            <p class="why-karmel-desc">
+              <span class="ar">نضمن لك نتائج ملموسة وقابلة للقياس مع تحسين مستمر لأداء مشاريعك. معدل رضا العملاء يتجاوز 98%.</span>
+              <span class="en" style="display:none;">We guarantee you tangible and measurable results with continuous improvement of your projects' performance. Customer satisfaction rate exceeds 98%.</span>
+            </p>
+            <div class="why-karmel-stats">
+              <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">رضا العملاء</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="why-karmel-cta">
+          <div class="cta-content">
+            <h3>
+              <span class="ar">جاهز لبدء رحلتك الرقمية؟</span>
+              <span class="en" style="display:none;">Ready to start your digital journey?</span>
+            </h3>
+            <p>
+              <span class="ar">تواصل معنا الآن واحصل على استشارة مجانية لمشروعك</span>
+              <span class="en" style="display:none;">Contact us now and get a free consultation for your project</span>
+            </p>
+            <a href="#contact" class="cta-button">
+              <span class="ar">ابدأ الآن</span>
+              <span class="en" style="display:none;">Start Now</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+          <div class="cta-decoration">
+            <div class="floating-shapes">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section: Clean, Modern, Consistent -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+          <!-- معلومات التواصل -->
+        <div class="contact-info">
+          <h2 class="contact-title">تواصل معنا</h2>
+          <p class="contact-desc">
+            نحن هنا لنصغي لك ونساعدك في تحقيق أهدافك الرقمية.<br>
+            لا تتردد في التواصل معنا عبر الوسائل التالية:
+          </p>
+          <ul class="contact-list">
+            <li><i class="fa fa-phone"></i> <span dir="ltr" style="unicode-bidi: embed;">+972 58-630-0009</span></li>
+            <li><i class="fa fa-envelope"></i> <a href="mailto:support@karmelplus.com" style="color:inherit;text-decoration:underline;cursor:pointer;">support@karmelplus.com</a></li>
+            <li><i class="fa fa-map-marker-alt"></i> شعفاط، القدس</li>
+          </ul>
+          <!-- خريطة الموقع -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps?q=Jerusalem%2C%20Shuafat&output=embed"
+              width="100%" height="180" style="border:0; border-radius:14px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        <!-- نموذج التواصل -->
+        <form class="contact-form">
+          <input type="text" placeholder="الاسم الكامل" required>
+          <input type="email" placeholder="البريد الإلكتروني" required>
+          <textarea placeholder="اكتب رسالتك هنا..." required></textarea>
+          <button type="submit">إرسال الرسالة</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Professional Footer -->
+  <footer class="main-footer simple-footer">
+    <div class="footer-footer-row footer-footer-row-horizontal">
+      <div class="footer-followus-vertical-center" style="margin: 0 auto; text-align: center; width: 100%;">
+        <div class="footer-followus-title" style="font-family: 'Cairo', sans-serif; font-size: 1.4rem; margin-bottom: 0.5em;">
+          <span class="ar">تابعونا</span>
+          <span class="en" style="display:none;">Follow Us</span>
+        </div>
+        <div class="footer-followus-icons footer-followus-icons-large" style="justify-content: center;">
+          <a href="https://github.com" class="footer-followus-link" aria-label="GitHub" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://facebook.com" class="footer-followus-link" aria-label="Facebook" target="_blank" rel="noopener">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" class="footer-followus-link" aria-label="Instagram" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://linkedin.com" class="footer-followus-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+        <div class="footer-simple-copyright footer-simple-copyright-center" style="font-family: 'Cairo', sans-serif;">
+          <span class="ar">&copy; 2025 شركة كرمل. جميع الحقوق محفوظة.</span>
+          <span class="en" style="display:none;">&copy; 2025 Karmel Company. All rights reserved.</span>
+        </div>
+        <div class="footer-links" style="margin-top: 1rem; text-align: center;">
+          <a href="#" class="footer-link" id="privacyPolicyLink">
+            <span class="ar">سياسة الخصوصية</span>
+            <span class="en" style="display:none;">Privacy Policy</span>
+          </a>
+          <span class="footer-separator">|</span>
+          <a href="#" class="footer-link" id="termsLink">
+            <span class="ar">الشروط والأحكام</span>
+            <span class="en" style="display:none;">Terms & Conditions</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="policy-modal">
+    <div class="policy-modal-content">
+      <div class="policy-modal-header">
+        <h3>
+          <span class="ar">سياسة الخصوصية</span>
+          <span class="en" style="display:none;">Privacy Policy</span>
+        </h3>
+        <span class="policy-close">&times;</span>
+      </div>
+      <div class="policy-modal-body">
+        <div class="policy-content">
+          <h4>
+            <span class="ar">مقدمة</span>
+            <span class="en" style="display:none;">Introduction</span>
+          </h4>
+          <p>
+            <span class="ar">نحن في شركة <strong>كرمل+</strong> نلتزم بحماية خصوصية زوارنا وعملائنا الكرام. تشرح هذه السياسة الشاملة كيفية جمع واستخدام وحماية المعلومات الشخصية التي تقدمها لنا.</span>
+            <span class="en" style="display:none;">At <strong>Karmel+</strong> Company, we are committed to protecting the privacy of our valued visitors and customers. This comprehensive policy explains how we collect, use, and protect personal information you provide to us.</span>
+          </p>
+          
+          <h4>
+            <span class="ar">المعلومات التي نجمعها</span>
+            <span class="en" style="display:none;">Information We Collect</span>
+          </h4>
+          <p>
+            <span class="ar">نجمع المعلومات التي تقدمها لنا مباشرة مثل:</span>
+            <span class="en" style="display:none;">We collect information you provide directly to us such as:</span>
+          </p>
+          <ul>
+            <li><span class="ar">الاسم الكامل ومعلومات الاتصال</span><span class="en" style="display:none;">Full name and contact information</span></li>
+            <li><span class="ar">البريد الإلكتروني ورقم الهاتف</span><span class="en" style="display:none;">Email address and phone number</span></li>
+            <li><span class="ar">معلومات الشركة أو المؤسسة</span><span class="en" style="display:none;">Company or organization information</span></li>
+            <li><span class="ar">تفاصيل المشروع والخدمات المطلوبة</span><span class="en" style="display:none;">Project details and requested services</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">كيفية استخدام المعلومات</span>
+            <span class="en" style="display:none;">How We Use Information</span>
+          </h4>
+          <p>
+            <span class="ar">نستخدم المعلومات التي نجمعها للأغراض التالية:</span>
+            <span class="en" style="display:none;">We use the information we collect for the following purposes:</span>
+          </p>
+          <ul>
+            <li><span class="ar">تقديم خدماتنا المتميزة والرد على استفساراتك</span><span class="en" style="display:none;">Providing our premium services and responding to your inquiries</span></li>
+            <li><span class="ar">تحسين تجربتك معنا وتطوير خدماتنا</span><span class="en" style="display:none;">Improving your experience with us and developing our services</span></li>
+            <li><span class="ar">إرسال التحديثات والعروض الخاصة</span><span class="en" style="display:none;">Sending updates and special offers</span></li>
+            <li><span class="ar">ضمان الأمان والامتثال للقوانين</span><span class="en" style="display:none;">Ensuring security and legal compliance</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">حماية المعلومات</span>
+            <span class="en" style="display:none;">Information Protection</span>
+          </h4>
+          <p>
+            <span class="ar">نطبق <em>أحدث إجراءات الأمان</em> لحماية معلوماتك الشخصية:</span>
+            <span class="en" style="display:none;">We implement the <em>latest security measures</em> to protect your personal information:</span>
+          </p>
+          <ul>
+            <li><span class="ar">تشفير البيانات باستخدام تقنيات SSL متقدمة</span><span class="en" style="display:none;">Data encryption using advanced SSL technologies</span></li>
+            <li><span class="ar">حماية من الوصول غير المصرح به</span><span class="en" style="display:none;">Protection from unauthorized access</span></li>
+            <li><span class="ar">نسخ احتياطية منتظمة وآمنة</span><span class="en" style="display:none;">Regular and secure backups</span></li>
+            <li><span class="ar">مراقبة مستمرة للأنظمة الأمنية</span><span class="en" style="display:none;">Continuous monitoring of security systems</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">مشاركة المعلومات</span>
+            <span class="en" style="display:none;">Information Sharing</span>
+          </h4>
+          <p>
+            <span class="ar">نلتزم بعدم مشاركة معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:</span>
+            <span class="en" style="display:none;">We are committed to not sharing your personal information with third parties except in the following cases:</span>
+          </p>
+          <ul>
+            <li><span class="ar">بموافقتك الصريحة والكتابية</span><span class="en" style="display:none;">With your explicit and written consent</span></li>
+            <li><span class="ar">عندما يقتضي القانون ذلك</span><span class="en" style="display:none;">When required by law</span></li>
+            <li><span class="ar">لحماية حقوقنا أو حقوق الآخرين</span><span class="en" style="display:none;">To protect our rights or the rights of others</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">حقوقك</span>
+            <span class="en" style="display:none;">Your Rights</span>
+          </h4>
+          <p>
+            <span class="ar">لديك الحقوق التالية فيما يتعلق بمعلوماتك الشخصية:</span>
+            <span class="en" style="display:none;">You have the following rights regarding your personal information:</span>
+          </p>
+          <ul>
+            <li><span class="ar">الوصول إلى معلوماتك وتحديثها</span><span class="en" style="display:none;">Access and update your information</span></li>
+            <li><span class="ar">حذف معلوماتك عند الطلب</span><span class="en" style="display:none;">Delete your information upon request</span></li>
+            <li><span class="ar">الاعتراض على معالجة معلوماتك</span><span class="en" style="display:none;">Object to the processing of your information</span></li>
+            <li><span class="ar">نقل معلوماتك إلى مزود خدمة آخر</span><span class="en" style="display:none;">Transfer your information to another service provider</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">التحديثات</span>
+            <span class="en" style="display:none;">Updates</span>
+          </h4>
+          <p>
+            <span class="ar">قد نحدث هذه السياسة من وقت لآخر لتعكس التغييرات في ممارساتنا أو اللوائح القانونية. سنقوم بإشعارك بأي تغييرات جوهرية عبر البريد الإلكتروني أو إشعار على موقعنا.</span>
+            <span class="en" style="display:none;">We may update this policy from time to time to reflect changes in our practices or legal regulations. We will notify you of any material changes via email or notice on our website.</span>
+          </p>
+          
+          <div class="contact-highlight">
+            <p>
+              <span class="ar"><strong>التواصل معنا:</strong> إذا كان لديك أي أسئلة حول سياسة الخصوصية، يمكنك التواصل معنا عبر:</span>
+              <span class="en" style="display:none;"><strong>Contact Us:</strong> If you have any questions about the privacy policy, you can contact us via:</span>
+            </p>
+            <p>
+              <span class="ar">📧 البريد الإلكتروني: <em>support@karmelplus.com</em></span>
+              <span class="en" style="display:none;">📧 Email: <em>support@karmelplus.com</em></span>
+          </p>
+            <p>
+              <span class="ar">📞 الهاتف: <em>+972 58-630-0009</em></span>
+              <span class="en" style="display:none;">📞 Phone: <em>+972 58-630-0009</em></span>
+            </p>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="policy-modal">
+    <div class="policy-modal-content">
+      <div class="policy-modal-header">
+        <h3>
+          <span class="ar">الشروط والأحكام</span>
+          <span class="en" style="display:none;">Terms & Conditions</span>
+        </h3>
+        <span class="policy-close">&times;</span>
+      </div>
+      <div class="policy-modal-body">
+        <div class="policy-content">
+          <h4>
+            <span class="ar">قبول الشروط</span>
+            <span class="en" style="display:none;">Acceptance of Terms</span>
+          </h4>
+          <p>
+            <span class="ar">باستخدام خدمات <strong>كرمل+</strong>، فإنك توافق على هذه الشروط والأحكام الشاملة. إذا كنت لا توافق على أي جزء منها، يرجى عدم استخدام خدماتنا.</span>
+            <span class="en" style="display:none;">By using <strong>Karmel+</strong> services, you agree to these comprehensive terms and conditions. If you do not agree to any part of them, please do not use our services.</span>
+          </p>
+          
+          <h4>
+            <span class="ar">الخدمات المقدمة</span>
+            <span class="en" style="display:none;">Services Provided</span>
+          </h4>
+          <p>
+            <span class="ar">نقدم مجموعة شاملة من الخدمات التقنية المتقدمة:</span>
+            <span class="en" style="display:none;">We provide a comprehensive range of advanced technical services:</span>
+          </p>
+          <ul>
+            <li><span class="ar">تطوير البرمجيات والمواقع الإلكترونية</span><span class="en" style="display:none;">Software and website development</span></li>
+            <li><span class="ar">تطوير التطبيقات المحمولة والويب</span><span class="en" style="display:none;">Mobile and web application development</span></li>
+            <li><span class="ar">تصميم واجهات المستخدم (UI/UX)</span><span class="en" style="display:none;">User interface design (UI/UX)</span></li>
+            <li><span class="ar">تكامل الأنظمة والخدمات السحابية</span><span class="en" style="display:none;">System integration and cloud services</span></li>
+            <li><span class="ar">الدعم الفني والصيانة</span><span class="en" style="display:none;">Technical support and maintenance</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">التزاماتنا</span>
+            <span class="en" style="display:none;">Our Commitments</span>
+          </h4>
+          <p>
+            <span class="ar">نلتزم بتقديم خدمات عالية الجودة مع:</span>
+            <span class="en" style="display:none;">We are committed to providing high-quality services with:</span>
+          </p>
+          <ul>
+            <li><span class="ar">الالتزام بالمواصفات المتفق عليها</span><span class="en" style="display:none;">Compliance with agreed specifications</span></li>
+            <li><span class="ar">التسليم في الوقت المحدد</span><span class="en" style="display:none;">Delivery on time</span></li>
+            <li><span class="ar">الدعم الفني المستمر</span><span class="en" style="display:none;">Continuous technical support</span></li>
+            <li><span class="ar">الشفافية في جميع مراحل المشروع</span><span class="en" style="display:none;">Transparency in all project phases</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">المدفوعات والرسوم</span>
+            <span class="en" style="display:none;">Payments and Fees</span>
+          </h4>
+          <p>
+            <span class="ar">يتم تحديد أسعار خدماتنا مسبقاً وتوضيحها في العروض المقدمة:</span>
+            <span class="en" style="display:none;">Our service prices are determined in advance and clarified in the offers provided:</span>
+          </p>
+          <ul>
+            <li><span class="ar">الدفع المسبق بنسبة 50% عند بدء المشروع</span><span class="en" style="display:none;">50% advance payment when starting the project</span></li>
+            <li><span class="ar">الدفع النهائي عند تسليم المشروع</span><span class="en" style="display:none;">Final payment upon project delivery</span></li>
+            <li><span class="ar">الدفع عبر وسائل آمنة ومقبولة</span><span class="en" style="display:none;">Payment through secure and accepted methods</span></li>
+            <li><span class="ar">فواتير واضحة ومفصلة</span><span class="en" style="display:none;">Clear and detailed invoices</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">الملكية الفكرية</span>
+            <span class="en" style="display:none;">Intellectual Property</span>
+          </h4>
+          <p>
+            <span class="ar">نحترم حقوق الملكية الفكرية ونضمن:</span>
+            <span class="en" style="display:none;">We respect intellectual property rights and ensure:</span>
+          </p>
+          <ul>
+            <li><span class="ar">انتقال جميع حقوق المشروع للعميل بعد الدفع النهائي</span><span class="en" style="display:none;">Transfer of all project rights to the client after final payment</span></li>
+            <li><span class="ar">الاحتفاظ بحقوقنا في التقنيات والأدوات المستخدمة</span><span class="en" style="display:none;">Retaining our rights to the technologies and tools used</span></li>
+            <li><span class="ar">عدم استخدام محتوى العميل لأغراض أخرى</span><span class="en" style="display:none;">Not using client content for other purposes</span></li>
+            <li><span class="ar">حماية سرية المعلومات والبيانات</span><span class="en" style="display:none;">Protecting the confidentiality of information and data</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">السرية وحماية البيانات</span>
+            <span class="en" style="display:none;">Confidentiality and Data Protection</span>
+          </h4>
+          <p>
+            <span class="ar">نلتزم بحماية سرية معلومات العميل من خلال:</span>
+            <span class="en" style="display:none;">We are committed to protecting client information confidentiality through:</span>
+          </p>
+          <ul>
+            <li><span class="ar">عدم مشاركة المعلومات مع أطراف ثالثة</span><span class="en" style="display:none;">Not sharing information with third parties</span></li>
+            <li><span class="ar">تطبيق إجراءات أمنية صارمة</span><span class="en" style="display:none;">Applying strict security measures</span></li>
+            <li><span class="ar">توقيع اتفاقيات السرية مع الموظفين</span><span class="en" style="display:none;">Signing confidentiality agreements with employees</span></li>
+            <li><span class="ar">حماية البيانات وفقاً للقوانين المعمول بها</span><span class="en" style="display:none;">Protecting data according to applicable laws</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">المسؤولية والضمانات</span>
+            <span class="en" style="display:none;">Liability and Warranties</span>
+          </h4>
+          <p>
+            <span class="ar">نلتزم بتقديم خدمات عالية الجودة مع ضمانات محدودة:</span>
+            <span class="en" style="display:none;">We are committed to providing high-quality services with limited warranties:</span>
+          </p>
+          <ul>
+            <li><span class="ar">ضمان عمل المشروع وفقاً للمواصفات المتفق عليها</span><span class="en" style="display:none;">Warranty that the project works according to agreed specifications</span></li>
+            <li><span class="ar">دعم فني مجاني لمدة 3 أشهر بعد التسليم</span><span class="en" style="display:none;">Free technical support for 3 months after delivery</span></li>
+            <li><span class="ar">مسؤولية محدودة بقيمة المشروع المتفق عليها</span><span class="en" style="display:none;">Liability limited to the agreed project value</span></li>
+            <li><span class="ar">عدم ضمان عدم وجود أخطاء برمجية</span><span class="en" style="display:none;">No guarantee of the absence of programming errors</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">إنهاء الخدمة</span>
+            <span class="en" style="display:none;">Service Termination</span>
+          </h4>
+          <p>
+            <span class="ar">يمكن إنهاء الخدمة من قبل أي من الطرفين:</span>
+            <span class="en" style="display:none;">The service can be terminated by either party:</span>
+          </p>
+          <ul>
+            <li><span class="ar">بإشعار مسبق كتابي لمدة 30 يوماً</span><span class="en" style="display:none;">With 30 days prior written notice</span></li>
+            <li><span class="ar">في حالة عدم الالتزام بالشروط</span><span class="en" style="display:none;">In case of non-compliance with terms</span></li>
+            <li><span class="ar">تسوية المدفوعات والالتزامات المتبقية</span><span class="en" style="display:none;">Settlement of payments and remaining obligations</span></li>
+            <li><span class="ar">تسليم العمل المنجز حتى تاريخ الإنهاء</span><span class="en" style="display:none;">Delivery of work completed until termination date</span></li>
+          </ul>
+          
+          <h4>
+            <span class="ar">القانون المطبق وحل النزاعات</span>
+            <span class="en" style="display:none;">Applicable Law and Dispute Resolution</span>
+          </h4>
+          <p>
+            <span class="ar">تخضع هذه الشروط لقانون فلسطين ويتم حل النزاعات من خلال:</span>
+            <span class="en" style="display:none;">These terms are subject to Palestinian law and disputes are resolved through:</span>
+          </p>
+          <ul>
+            <li><span class="ar">المحادثات الودية والتفاوض المباشر</span><span class="en" style="display:none;">Friendly conversations and direct negotiation</span></li>
+            <li><span class="ar">الوساطة من قبل طرف محايد</span><span class="en" style="display:none;">Mediation by a neutral party</span></li>
+            <li><span class="ar">المحاكم المختصة في فلسطين</span><span class="en" style="display:none;">Competent courts in Palestine</span></li>
+          </ul>
+          
+          <div class="contact-highlight">
+          <p>
+              <span class="ar"><strong>للاستفسارات حول هذه الشروط:</strong></span>
+              <span class="en" style="display:none;"><strong>For inquiries about these terms:</strong></span>
+            </p>
+            <p>
+              <span class="ar">📧 البريد الإلكتروني: <em>support@karmelplus.com</em></span>
+              <span class="en" style="display:none;">📧 Email: <em>support@karmelplus.com</em></span>
+            </p>
+            <p>
+              <span class="ar">📞 الهاتف: <em>+972 58-630-0009</em></span>
+              <span class="en" style="display:none;">📞 Phone: <em>+972 58-630-0009</em></span>
+            </p>
+            <p>
+              <span class="ar">📍 العنوان: <em>شعفاط، القدس</em></span>
+              <span class="en" style="display:none;">📍 Address: <em>Shuafat, Jerusalem</em></span>
+            </p>
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="Admin-Dashboard/site-updater.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const contactSection = document.querySelector('.contact-section');
+
+  function checkContactSection() {
+    const rect = contactSection.getBoundingClientRect();
+    // إذا كان القسم ظاهرًا بنسبة 40% على الأقل
+    if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+      contactSection.classList.add('visible');
+    } else {
+      contactSection.classList.remove('visible');
+    }
+  }
+
+  // عند الضغط على رابط تواصل معنا في القائمة
+  document.querySelectorAll('a[href="#contact"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      setTimeout(() => {
+        contactSection.classList.add('visible');
+      }, 300);
+    });
+  });
+
+  window.addEventListener('scroll', checkContactSection);
+  checkContactSection(); // للتفعيل إذا كان ظاهرًا من البداية
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const servicesSection = document.querySelector('.services-modern-wave');
+  const servicesTitle = document.querySelector('.services-modern-title');
+  const serviceItems = document.querySelectorAll('.service-modern-item');
+  function bounceAll() {
+    servicesTitle.classList.remove('bounce');
+    void servicesTitle.offsetWidth;
+    servicesTitle.classList.add('bounce');
+    serviceItems.forEach(item => {
+      item.classList.remove('bounce');
+      void item.offsetWidth;
+      item.classList.add('bounce');
+    });
+  }
+  function checkServicesSection() {
+    const rect = servicesSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+      servicesSection.classList.add('animated');
+      bounceAll();
+    } else {
+      servicesSection.classList.remove('animated');
+    }
+  }
+  document.querySelectorAll('a[href=\"#services\"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      setTimeout(() => {
+        servicesSection.classList.add('animated');
+        bounceAll();
+      }, 300);
+    });
+  });
+  window.addEventListener('scroll', checkServicesSection);
+  checkServicesSection();
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const aboutSection = document.querySelector('#about');
+  const aboutTitle = document.querySelector('.about-section-title');
+  function bounceAbout() {
+    aboutTitle.classList.remove('bounce');
+    void aboutTitle.offsetWidth;
+    aboutTitle.classList.add('bounce');
+  }
+  function checkAboutSection() {
+    const rect = aboutSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+      bounceAbout();
+    }
+  }
+  document.querySelectorAll('a[href="#about"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      setTimeout(bounceAbout, 300);
+    });
+  });
+  window.addEventListener('scroll', checkAboutSection);
+});
+</script>
+
+<!-- JavaScript للنوافذ المنبثقة - تم دمجها مع script.js الرئيسي -->
+
+
+
+
+</body>
+</html> 
