@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    {
+      "source": "/login",
+      "destination": "/Admin-Dashboard/login.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/Admin-Dashboard/dashboard.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/index.html"
+    }
+  ]
+}
