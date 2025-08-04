@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard Login</title>
+  <meta name="theme-color" content="#7c3aed">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+  <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+  <link rel="stylesheet" href="login-stylee.css">
+</head>
+<body>
+
+  <div class="floating-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <div class="login-container">
+    <div class="admin-badge">🔐 لوحة الإدارة</div>
+    
+    <div class="logo">
+      <h2 class="brand-name"> <span class="brand-plus">+</span> KARMEL</h2>
+    </div>
+    
+    <h1>تسجيل الدخول</h1>
+    <p class="subtitle">أدخل بياناتك للوصول إلى لوحة التحكم</p>
+    
+    <div class="error-message" id="errorMessage"></div>
+    <div class="success-message" id="successMessage"></div>
+    
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">اسم المستخدم</label>
+        <div class="input-wrapper">
+          <input type="text" id="username" name="username" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">كلمة المرور</label>
+        <div class="input-wrapper password-wrapper">
+          <input type="password" id="password" name="password" required>
+          <span class="password-toggle" id="passwordToggle"><i class="fi fi-sr-eye-crossed"></i></span>
+        </div>
+      </div>
+      
+      <button type="submit" class="login-btn" id="loginBtn">
+        <span class="btn-text">دخول إلى لوحة التحكم</span>
+      </button>
+    </form>
+  </div>
+
+  <!-- الفوتر البسيط لصفحة تسجيل الدخول -->
+  <footer class="login-footer">
+    <div class="login-footer-content">
+      كل الحقوق محفوظة &copy; لشركة كرمل 2025
+    </div>
+  </footer>
+
+  
+  <script src="login-script.js"></script>
+</body>
+</html> 
