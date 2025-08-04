@@ -1,19 +1,16 @@
-// نظام تكامل كرمل+ - الموقع الأساسي
 class KarmelWebsite {
   constructor() {
     this.data = this.loadData();
     this.init();
   }
 
-  // تحميل البيانات من لوحة التحكم
+
   loadData() {
     const savedData = localStorage.getItem('karmelData');
     if (savedData) {
       return JSON.parse(savedData);
     }
-    
-    // البيانات الافتراضية إذا لم تكن موجودة
-    return {
+        return {
       hero: {
         title: "ودّع الإجراءات اليدوية وابدأ التحول الرقمي مع كرمل+",
         desc1: "نقدّم حلولاً ذكية تسرّع إدارة أعمالك وتزيد من دقتها وكفاءتها.",
@@ -51,35 +48,6 @@ class KarmelWebsite {
         { id: 4, name: "تكامل الأنظمة", icon: "🔗" },
         { id: 5, name: "تدريب الموظفين", icon: "🎓" }
       ],
-      feedback: [
-        {
-          id: 1,
-          name: "محمد عوض",
-          company: "شركة حلول القدس",
-          text: "كرمل حولوا فكرتي إلى منتج ناجح بسرعة واحترافية. فريق متعاون وملتزم بالتفاصيل!",
-          image: "images/image2.webp",
-
-          rating: 5
-        },
-        {
-          id: 2,
-          name: "سارة منصور",
-          company: "تطبيق تعلّم",
-          text: "أفضل تجربة تطوير مررت بها. التواصل سريع والدعم مستمر حتى بعد التسليم.",
-          image: "images/image.png",
-
-          rating: 5
-        },
-        {
-          id: 3,
-          name: "أحمد خليل",
-          company: "مؤسسة التقنية المتقدمة",
-          text: "مستوى احترافي عالي جداً. النتائج تجاوزت توقعاتنا بكثير. أنصح بالتعامل مع كرمل+ بكل ثقة.",
-          image: "images/image1.png",
-
-          rating: 5
-        }
-      ],
       contact: {
         phone: "+972 58-630-0009",
         email: "support@karmelplus.com",
@@ -106,10 +74,7 @@ class KarmelWebsite {
     this.initAdvancedWhyKarmel();
     this.checkForUpdates();
     this.initMobileOptimizations();
-    this.initFeedbackSection();
-    this.addFeedbackRatings();
-    this.optimizeFeedbackPerformance();
-    this.enhanceFeedbackUX();
+
     this.initAdditionalModalHandlers();
   }
 
@@ -120,7 +85,6 @@ class KarmelWebsite {
     this.updateVMVSection();
     this.updatePartnersSection();
     this.updateServicesSection();
-    this.updateFeedbackSection();
     this.updateContactSection();
     this.updateSocialLinks();
   }
@@ -198,35 +162,6 @@ class KarmelWebsite {
     });
   }
 
-  // تحديث قسم آراء العملاء
-  updateFeedbackSection() {
-    const feedbackList = document.querySelector('.feedback-list');
-    if (!feedbackList) return;
-
-    feedbackList.innerHTML = '';
-    
-    this.data.feedback.forEach(feedback => {
-      const feedbackItem = document.createElement('div');
-      feedbackItem.className = 'feedback-item';
-      feedbackItem.style.cssText = 'display: flex; align-items: flex-start; gap: 1.2em;';
-      feedbackItem.innerHTML = `
-        <img src="${feedback.image}" alt="${feedback.name}" class="feedback-avatar" style="width:64px; height:64px; border-radius:50%; box-shadow:0 2px 8px rgba(124,58,237,0.10); flex-shrink:0;">
-        <div style="flex:1;">
-          <div class="feedback-text" style="font-size: 1.08rem; color: #333; background: #fff; border-radius: 14px; box-shadow: 0 2px 12px 0 rgba(124,58,237,0.07); padding: 1.2em 1em; margin-bottom: 0.5em;">
-            <span class="ar">"${feedback.text}"</span>
-            <span class="en" style="display:none;">"${feedback.text}"</span>
-          </div>
-          <div class="feedback-author">
-            <span class="ar">${feedback.name} - ${feedback.company}</span>
-            <span class="en" style="display:none;">${feedback.name} - ${feedback.company}</span>
-          </div>
-        </div>
-      `;
-      feedbackList.appendChild(feedbackItem);
-    });
-  }
-
-  // تحديث قسم التواصل
   updateContactSection() {
     const phoneElement = document.querySelector('.contact-list li:first-child span');
     const emailElement = document.querySelector('.contact-list li:nth-child(2) a');
@@ -240,7 +175,6 @@ class KarmelWebsite {
     if (addressElement) addressElement.innerHTML = `<i class="fa fa-map-marker-alt"></i> ${this.data.contact.address}`;
   }
 
-  // تحديث روابط التواصل الاجتماعي
   updateSocialLinks() {
     const githubLink = document.querySelector('a[aria-label="GitHub"]');
     const facebookLink = document.querySelector('a[aria-label="Facebook"]');
@@ -266,13 +200,12 @@ class KarmelWebsite {
       });
     });
 
-    // النقر على اللوجو للعودة للصفحة الرئيسية
     const logoLink = document.querySelector('.logo-link');
     if (logoLink) {
       logoLink.addEventListener('click', (e) => {
         e.preventDefault();
         this.scrollToSection('home');
-        // إزالة الفئة النشطة من جميع الروابط وإضافتها للرئيسية
+      
         document.querySelectorAll('.nav-link').forEach(link => {
           link.classList.remove('active');
         });
@@ -1470,176 +1403,6 @@ class KarmelWebsite {
       }
     });
   }
-
-  // تهيئة قسم آراء العملاء
-  initFeedbackSection() {
-    this.setupFeedbackAnimations();
-    this.setupFeedbackInteractions();
-    this.initFeedbackScrollEffects();
-  }
-
-  // إعداد التأثيرات الحركية لقسم آراء العملاء
-  setupFeedbackAnimations() {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('scroll-visible');
-          this.animateFeedbackItem(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.3,
-      rootMargin: '0px 0px -50px 0px'
-    });
-
-    feedbackItems.forEach(item => {
-      observer.observe(item);
-    });
-  }
-
-  // تأثير حركي لعنصر آراء العملاء
-  animateFeedbackItem(item) {
-    const avatar = item.querySelector('.feedback-avatar');
-    const text = item.querySelector('.feedback-text');
-    
-    if (avatar) {
-      avatar.style.animation = 'feedbackAvatarPop 0.6s ease forwards';
-    }
-    
-    if (text) {
-      text.style.animation = 'feedbackTextSlide 0.8s ease forwards';
-    }
-  }
-
-  // إعداد التفاعلات لقسم آراء العملاء
-  setupFeedbackInteractions() {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
-    
-    feedbackItems.forEach(item => {
-      // تأثير عند التمرير
-      item.addEventListener('mouseenter', () => {
-        this.addFeedbackHoverEffect(item);
-      });
-      
-      item.addEventListener('mouseleave', () => {
-        this.removeFeedbackHoverEffect(item);
-      });
-      
-      // تأثير عند النقر
-      item.addEventListener('click', (e) => {
-        if (!e.target.closest('a')) {
-          this.addFeedbackClickEffect(item);
-        }
-      });
-      
-      // دعم لوحة المفاتيح
-      item.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.addFeedbackClickEffect(item);
-        }
-      });
-    });
-  }
-
-  // تأثير التمرير على عنصر آراء العملاء
-  addFeedbackHoverEffect(item) {
-    item.style.transform = 'translateY(-8px) scale(1.02)';
-    item.style.boxShadow = '0 20px 60px rgba(124, 58, 237, 0.2)';
-    
-    const avatar = item.querySelector('.feedback-avatar');
-    if (avatar) {
-      avatar.style.transform = 'scale(1.15) rotate(5deg)';
-    }
-  }
-
-  // إزالة تأثير التمرير
-  removeFeedbackHoverEffect(item) {
-    item.style.transform = '';
-    item.style.boxShadow = '';
-    
-    const avatar = item.querySelector('.feedback-avatar');
-    if (avatar) {
-      avatar.style.transform = '';
-    }
-  }
-
-  // تأثير النقر على عنصر آراء العملاء
-  addFeedbackClickEffect(item) {
-    item.style.transform = 'scale(0.98)';
-    item.style.transition = 'transform 0.1s ease';
-    
-    setTimeout(() => {
-      item.style.transform = '';
-      item.style.transition = '';
-    }, 100);
-    
-    // إضافة تأثير التموج
-    this.createFeedbackRipple(item);
-  }
-
-  // إنشاء تأثير التموج
-  createFeedbackRipple(item) {
-    const ripple = document.createElement('div');
-    ripple.className = 'feedback-ripple';
-    ripple.style.cssText = `
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(124, 58, 237, 0.3);
-      transform: scale(0);
-      animation: feedbackRipple 0.6s linear;
-      pointer-events: none;
-      top: 50%;
-      left: 50%;
-      width: 100px;
-      height: 100px;
-      margin: -50px 0 0 -50px;
-    `;
-    
-    item.style.position = 'relative';
-    item.appendChild(ripple);
-    
-    setTimeout(() => {
-      ripple.remove();
-    }, 600);
-  }
-
-  // تأثيرات التمرير لقسم آراء العملاء
-  initFeedbackScrollEffects() {
-    const feedbackSection = document.querySelector('.feedback-section');
-    if (!feedbackSection) return;
-    
-    const handleScroll = () => {
-      const rect = feedbackSection.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-      
-      if (isVisible) {
-        const progress = Math.max(0, Math.min(1, (window.innerHeight - rect.top) / rect.height));
-        this.updateFeedbackScrollProgress(progress);
-      }
-    };
-    
-    window.addEventListener('scroll', this.throttle(handleScroll, 16));
-    handleScroll(); // تشغيل مرة واحدة عند التحميل
-  }
-
-  // تحديث تقدم التمرير
-  updateFeedbackScrollProgress(progress) {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
-    
-    feedbackItems.forEach((item, index) => {
-      const delay = index * 0.1;
-      const itemProgress = Math.max(0, Math.min(1, (progress - delay) * 2));
-      
-      if (itemProgress > 0) {
-        item.style.opacity = itemProgress;
-        item.style.transform = `translateY(${20 * (1 - itemProgress)}px)`;
-      }
-    });
-  }
-
   // دالة مساعدة للتحكم في معدل التحديث
   throttle(func, limit) {
     let inThrottle;
@@ -1652,225 +1415,6 @@ class KarmelWebsite {
         setTimeout(() => inThrottle = false, limit);
       }
     }
-  }
-
-  // تحسين تجربة المستخدم لقسم آراء العملاء
-  enhanceFeedbackUX() {
-    // إضافة تأثيرات صوتية (اختيارية)
-    this.addFeedbackSoundEffects();
-    
-    // إضافة تأثيرات بصرية إضافية
-    this.addFeedbackVisualEffects();
-    
-    // تحسين التفاعل مع لوحة المفاتيح
-    this.enhanceFeedbackKeyboardSupport();
-  }
-
-  // إضافة تأثيرات صوتية
-  addFeedbackSoundEffects() {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
-    
-    feedbackItems.forEach(item => {
-      item.addEventListener('click', () => {
-        // يمكن إضافة صوت هنا إذا كان مطلوباً
-        this.playFeedbackSound();
-      });
-    });
-  }
-
-  // تشغيل صوت التأثير
-  playFeedbackSound() {
-    // يمكن إضافة كود تشغيل الصوت هنا
-    // مثال: new Audio('feedback-click.mp3').play();
-  }
-
-  // إضافة تأثيرات بصرية إضافية
-  addFeedbackVisualEffects() {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
-    
-    feedbackItems.forEach((item, index) => {
-      // إضافة تأثير التوهج عند التمرير
-      item.addEventListener('mouseenter', () => {
-        this.addGlowEffectToFeedback(item);
-      });
-      
-      item.addEventListener('mouseleave', () => {
-        this.removeGlowEffectFromFeedback(item);
-      });
-      
-      // إضافة تأثير النبض عند التحميل
-      setTimeout(() => {
-        item.classList.add('pulse-on-load');
-      }, index * 200);
-    });
-  }
-
-  // إضافة تأثير التوهج
-  addGlowEffectToFeedback(item) {
-    item.style.boxShadow = '0 0 30px rgba(124, 58, 237, 0.3)';
-    item.style.borderColor = '#7c3aed';
-  }
-
-  // إزالة تأثير التوهج
-  removeGlowEffectFromFeedback(item) {
-    item.style.boxShadow = '';
-    item.style.borderColor = '';
-  }
-
-  // تحسين دعم لوحة المفاتيح
-  enhanceFeedbackKeyboardSupport() {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
-    
-    feedbackItems.forEach(item => {
-      item.setAttribute('tabindex', '0');
-      item.setAttribute('role', 'button');
-      item.setAttribute('aria-label', 'رأي العميل - اضغط للتفاعل');
-      
-      item.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.triggerFeedbackInteraction(item);
-        }
-      });
-    });
-  }
-
-  // تفعيل التفاعل مع آراء العملاء
-  triggerFeedbackInteraction(item) {
-    // إضافة تأثير النقر
-    item.style.transform = 'scale(0.95)';
-    
-    setTimeout(() => {
-      item.style.transform = '';
-    }, 150);
-    
-    // يمكن إضافة المزيد من التفاعلات هنا
-    this.showFeedbackDetails(item);
-  }
-
-  // عرض تفاصيل إضافية للرأي
-  showFeedbackDetails(item) {
-    const authorName = item.querySelector('.feedback-author-name')?.textContent;
-    const company = item.querySelector('.feedback-author-company')?.textContent;
-    const text = item.querySelector('.feedback-text')?.textContent;
-    
-    // يمكن إضافة نافذة منبثقة أو تفاصيل إضافية هنا
-    console.log(`تفاصيل رأي ${authorName} من ${company}: ${text}`);
-  }
-
-  // تحسين الأداء لقسم آراء العملاء
-  optimizeFeedbackPerformance() {
-    // استخدام Intersection Observer للتحميل الكسول
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        }
-      });
-    });
-    
-    // مراقبة الصور
-    document.querySelectorAll('.feedback-avatar[data-src]').forEach(img => {
-      imageObserver.observe(img);
-    });
-    
-    // تحسين التمرير
-    this.throttleFeedbackScroll();
-  }
-
-  // تحسين أداء التمرير
-  throttleFeedbackScroll() {
-    let ticking = false;
-    
-    const updateFeedbackOnScroll = () => {
-      const feedbackItems = document.querySelectorAll('.feedback-item');
-      
-      feedbackItems.forEach(item => {
-        const rect = item.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        
-        if (isVisible) {
-          item.classList.add('in-viewport');
-        } else {
-          item.classList.remove('in-viewport');
-        }
-      });
-      
-      ticking = false;
-    };
-    
-    const requestTick = () => {
-      if (!ticking) {
-        requestAnimationFrame(updateFeedbackOnScroll);
-        ticking = true;
-      }
-    };
-    
-    window.addEventListener('scroll', requestTick, { passive: true });
-  }
-
-  // إضافة تقييمات النجوم
-  addFeedbackRatings() {
-    const feedbackItems = document.querySelectorAll('.feedback-item');
-    
-    feedbackItems.forEach(item => {
-      const rating = item.dataset.rating || 5;
-      const ratingContainer = item.querySelector('.feedback-rating');
-      
-      if (ratingContainer) {
-        ratingContainer.innerHTML = '';
-        for (let i = 0; i < 5; i++) {
-          const star = document.createElement('span');
-          star.className = 'feedback-star';
-          star.innerHTML = i < rating ? '★' : '☆';
-          star.style.animationDelay = `${i * 0.1}s`;
-          ratingContainer.appendChild(star);
-        }
-      }
-    });
-  }
-
-  // تحديث قسم آراء العملاء من البيانات
-  updateFeedbackSection() {
-    const feedbackList = document.querySelector('.feedback-list');
-    if (!feedbackList || !this.data.feedback) return;
-    
-    feedbackList.innerHTML = '';
-    
-    this.data.feedback.forEach((feedback, index) => {
-      const feedbackItem = this.createFeedbackItem(feedback, index);
-      feedbackList.appendChild(feedbackItem);
-    });
-    
-    // إعادة تهيئة التأثيرات
-    this.initFeedbackSection();
-  }
-
-  // إنشاء عنصر آراء العملاء
-  createFeedbackItem(feedback, index) {
-    const item = document.createElement('div');
-    item.className = 'feedback-item';
-    item.dataset.rating = feedback.rating || 5;
-    item.style.animationDelay = `${index * 0.2}s`;
-    
-    item.innerHTML = `
-      <div class="feedback-item-header">
-        <img src="${feedback.image}" alt="${feedback.name}" class="feedback-avatar" data-src="${feedback.image}">
-        <div class="feedback-author-info">
-          <div class="feedback-author-name">${feedback.name}</div>
-          <div class="feedback-author-company">${feedback.company}</div>
-        </div>
-      </div>
-      <div class="feedback-text">${feedback.text}</div>
-      <div class="feedback-rating"></div>
-    `;
-    
-    return item;
   }
 
   // تهيئة إضافية للنوافذ المنبثقة

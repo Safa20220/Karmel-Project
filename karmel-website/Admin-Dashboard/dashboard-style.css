@@ -507,8 +507,7 @@ textarea.form-control {
 
 /* Card Actions */
 .partner-actions,
-.service-card .partner-actions,
-.feedback-item .partner-actions {
+.service-card .partner-actions {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
@@ -679,71 +678,6 @@ textarea.form-control {
   flex-grow: 1;
 }
 
-/* Feedback List */
-.feedback-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  min-height: 200px;
-}
-
-.feedback-item {
-  background: var(--bg-card);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow-light);
-  border: 1px solid var(--border-color);
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  transition: all 0.3s ease;
-}
-
-.feedback-item:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-dark);
-}
-
-.feedback-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  border: 2px solid var(--accent-primary);
-}
-
-.feedback-content {
-  flex: 1;
-  min-width: 0;
-}
-
-.feedback-text {
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
-.feedback-author {
-  color: var(--text-secondary);
-  font-weight: 600;
-  font-size: 0.9rem;
-}
-
-/* Empty State */
-.feedback-empty {
-  text-align: center;
-  padding: 3rem;
-  color: var(--text-secondary);
-}
-
-.feedback-empty p {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
-
-/* Modals */
 .modal {
   display: none;
   position: fixed;

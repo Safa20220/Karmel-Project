@@ -789,28 +789,10 @@ function updateMainSite() {
   }
 }
 
-// تحميل التطبيق عند اكتمال تحميل الصفحة
 document.addEventListener('DOMContentLoaded', function() {
   console.log('dashboard-script.js: DOMContentLoaded تم استدعاؤها');
   initializeDashboard();
-  
-  // اختبار قسم آراء العملاء
-  console.log('dashboard-script.js: تم تحميل الداش بورد بنجاح');
-  console.log('dashboard-script.js: عدد آراء العملاء:', siteData.feedback.length);
-  
-  // التأكد من تحميل آراء العملاء
-  setTimeout(() => {
-    const feedbackList = document.getElementById('feedbackList');
-    if (feedbackList) {
-      console.log('dashboard-script.js: عنصر feedbackList موجود');
-      loadFeedback();
-    } else {
-      console.error('dashboard-script.js: عنصر feedbackList غير موجود');
-    }
-  }, 1000);
-  
-  console.log('dashboard-script.js: تم إكمال تحميل الداشبورد');
-});
+
 
 // دوال قسم "لماذا كرمل+"
 function loadWhyKarmelData() {
