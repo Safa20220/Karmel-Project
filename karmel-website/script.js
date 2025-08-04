@@ -1955,3 +1955,89 @@ if (window.location.search.includes('dev=true')) {
   updateBtn.onclick = loadUpdateFile;
   document.body.appendChild(updateBtn);
 }
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const contactSection = document.querySelector('.contact-section');
+
+  function checkContactSection() {
+    const rect = contactSection.getBoundingClientRect();
+    // إذا كان القسم ظاهرًا بنسبة 40% على الأقل
+    if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+      contactSection.classList.add('visible');
+    } else {
+      contactSection.classList.remove('visible');
+    }
+  }
+
+  // عند الضغط على رابط تواصل معنا في القائمة
+  document.querySelectorAll('a[href="#contact"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      setTimeout(() => {
+        contactSection.classList.add('visible');
+      }, 300);
+    });
+  });
+
+  window.addEventListener('scroll', checkContactSection);
+  checkContactSection(); // للتفعيل إذا كان ظاهرًا من البداية
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const servicesSection = document.querySelector('.services-modern-wave');
+  const servicesTitle = document.querySelector('.services-modern-title');
+  const serviceItems = document.querySelectorAll('.service-modern-item');
+  function bounceAll() {
+    servicesTitle.classList.remove('bounce');
+    void servicesTitle.offsetWidth;
+    servicesTitle.classList.add('bounce');
+    serviceItems.forEach(item => {
+      item.classList.remove('bounce');
+      void item.offsetWidth;
+      item.classList.add('bounce');
+    });
+  }
+  function checkServicesSection() {
+    const rect = servicesSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+      servicesSection.classList.add('animated');
+      bounceAll();
+    } else {
+      servicesSection.classList.remove('animated');
+    }
+  }
+  document.querySelectorAll('a[href=\"#services\"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      setTimeout(() => {
+        servicesSection.classList.add('animated');
+        bounceAll();
+      }, 300);
+    });
+  });
+  window.addEventListener('scroll', checkServicesSection);
+  checkServicesSection();
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const aboutSection = document.querySelector('#about');
+  const aboutTitle = document.querySelector('.about-section-title');
+  function bounceAbout() {
+    aboutTitle.classList.remove('bounce');
+    void aboutTitle.offsetWidth;
+    aboutTitle.classList.add('bounce');
+  }
+  function checkAboutSection() {
+    const rect = aboutSection.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100 && rect.bottom > 100) {
+      bounceAbout();
+    }
+  }
+  document.querySelectorAll('a[href="#about"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+      setTimeout(bounceAbout, 300);
+    });
+  });
+  window.addEventListener('scroll', checkAboutSection);
+});
+
