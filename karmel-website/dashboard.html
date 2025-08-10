@@ -80,15 +80,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#policies" class="nav-link" data-section="policies">
-              <i class="fas fa-shield-alt"></i>
-              <span>السياسات</span>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="#contact" class="nav-link" data-section="contact">
               <i class="fas fa-envelope"></i>
               <span>معلومات التواصل</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#footer" class="nav-link" data-section="footer">
+              <i class="fas fa-sitemap"></i>
+              <span>التذييل</span>
             </a>
           </li>
         </ul>
@@ -158,10 +158,7 @@
               <i class="fas fa-cog"></i>
               إدارة الخدمات
             </button>
-            <button class="action-btn" onclick="showSection('feedback')">
-              <i class="fas fa-comment"></i>
-              إضافة رأي عميل
-            </button>
+
             <button class="action-btn" onclick="updateMainSite()">
               <i class="fas fa-sync-alt"></i>
               تحديث الموقع الأساسي
@@ -520,178 +517,7 @@
         </div>
       </section>
 
-      <!-- Policies Section -->
-      <section id="policies" class="dashboard-section">
-        <div class="section-header">
-          <h2>إدارة السياسات</h2>
-          <p>تعديل سياسة الخصوصية والشروط والأحكام</p>
-        </div>
-        
-        <div class="policies-editor">
-          <div class="policy-tabs">
-            <button class="policy-tab active" onclick="showPolicyTab('privacy')">سياسة الخصوصية</button>
-            <button class="policy-tab" onclick="showPolicyTab('terms')">الشروط والأحكام</button>
-          </div>
-          
-          <div id="privacy-policy" class="policy-content active">
-            <h3>سياسة الخصوصية</h3>
-            <div class="form-group">
-              <label>العنوان</label>
-              <input type="text" id="privacyTitle" class="form-control" value="سياسة الخصوصية">
-            </div>
-            
-            <div class="form-group">
-              <label>المقدمة</label>
-              <textarea id="privacyIntro" class="form-control" rows="4">نحن في شركة كرمل+ نلتزم بحماية خصوصية زوارنا وعملائنا الكرام. تشرح هذه السياسة الشاملة كيفية جمع واستخدام وحماية المعلومات الشخصية التي تقدمها لنا.</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>المعلومات التي نجمعها</label>
-              <textarea id="privacyInfoCollected" class="form-control" rows="6">نجمع المعلومات التي تقدمها لنا مباشرة مثل:
-• الاسم الكامل ومعلومات الاتصال
-• البريد الإلكتروني ورقم الهاتف
-• معلومات الشركة أو المؤسسة
-• تفاصيل المشروع والخدمات المطلوبة</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>كيفية استخدام المعلومات</label>
-              <textarea id="privacyInfoUsage" class="form-control" rows="6">نستخدم المعلومات التي نجمعها للأغراض التالية:
-• تقديم خدماتنا المتميزة والرد على استفساراتك
-• تحسين تجربتك معنا وتطوير خدماتنا
-• إرسال التحديثات والعروض الخاصة
-• ضمان الأمان والامتثال للقوانين</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>حماية المعلومات</label>
-              <textarea id="privacyProtection" class="form-control" rows="6">نطبق أحدث إجراءات الأمان لحماية معلوماتك الشخصية:
-• تشفير البيانات باستخدام تقنيات SSL متقدمة
-• حماية من الوصول غير المصرح به
-• نسخ احتياطية منتظمة وآمنة
-• مراقبة مستمرة للأنظمة الأمنية</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>مشاركة المعلومات</label>
-              <textarea id="privacySharing" class="form-control" rows="4">نلتزم بعدم مشاركة معلوماتك الشخصية مع أطراف ثالثة إلا في الحالات التالية:
-• بموافقتك الصريحة والكتابية
-• عندما يقتضي القانون ذلك
-• لحماية حقوقنا أو حقوق الآخرين</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>حقوقك</label>
-              <textarea id="privacyRights" class="form-control" rows="5">لديك الحقوق التالية فيما يتعلق بمعلوماتك الشخصية:
-• الوصول إلى معلوماتك وتحديثها
-• حذف معلوماتك عند الطلب
-• الاعتراض على معالجة معلوماتك
-• نقل معلوماتك إلى مزود خدمة آخر</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>التحديثات</label>
-              <textarea id="privacyUpdates" class="form-control" rows="3">قد نحدث هذه السياسة من وقت لآخر لتعكس التغييرات في ممارساتنا أو اللوائح القانونية. سنقوم بإشعارك بأي تغييرات جوهرية عبر البريد الإلكتروني أو إشعار على موقعنا.</textarea>
-            </div>
-          </div>
-          
-          <div id="terms-policy" class="policy-content">
-            <h3>الشروط والأحكام</h3>
-            <div class="form-group">
-              <label>العنوان</label>
-              <input type="text" id="termsTitle" class="form-control" value="الشروط والأحكام">
-            </div>
-            
-            <div class="form-group">
-              <label>قبول الشروط</label>
-              <textarea id="termsAcceptance" class="form-control" rows="3">باستخدام خدمات كرمل+، فإنك توافق على هذه الشروط والأحكام الشاملة. إذا كنت لا توافق على أي جزء منها، يرجى عدم استخدام خدماتنا.</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>الخدمات المقدمة</label>
-              <textarea id="termsServices" class="form-control" rows="6">نقدم مجموعة شاملة من الخدمات التقنية المتقدمة:
-• تطوير البرمجيات والمواقع الإلكترونية
-• تطوير التطبيقات المحمولة والويب
-• تصميم واجهات المستخدم (UI/UX)
-• تكامل الأنظمة والخدمات السحابية
-• الدعم الفني والصيانة</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>التزاماتنا</label>
-              <textarea id="termsCommitments" class="form-control" rows="5">نلتزم بتقديم خدمات عالية الجودة مع:
-• الالتزام بالمواصفات المتفق عليها
-• التسليم في الوقت المحدد
-• الدعم الفني المستمر
-• الشفافية في جميع مراحل المشروع</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>المدفوعات والرسوم</label>
-              <textarea id="termsPayments" class="form-control" rows="5">يتم تحديد أسعار خدماتنا مسبقاً وتوضيحها في العروض المقدمة:
-• الدفع المسبق بنسبة 50% عند بدء المشروع
-• الدفع النهائي عند تسليم المشروع
-• الدفع عبر وسائل آمنة ومقبولة
-• فواتير واضحة ومفصلة</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>الملكية الفكرية</label>
-              <textarea id="termsIntellectual" class="form-control" rows="5">نحترم حقوق الملكية الفكرية ونضمن:
-• انتقال جميع حقوق المشروع للعميل بعد الدفع النهائي
-• الاحتفاظ بحقوقنا في التقنيات والأدوات المستخدمة
-• عدم استخدام محتوى العميل لأغراض أخرى
-• حماية سرية المعلومات والبيانات</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>السرية وحماية البيانات</label>
-              <textarea id="termsConfidentiality" class="form-control" rows="5">نلتزم بحماية سرية معلومات العميل من خلال:
-• عدم مشاركة المعلومات مع أطراف ثالثة
-• تطبيق إجراءات أمنية صارمة
-• توقيع اتفاقيات السرية مع الموظفين
-• حماية البيانات وفقاً للقوانين المعمول بها</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>المسؤولية والضمانات</label>
-              <textarea id="termsLiability" class="form-control" rows="5">نلتزم بتقديم خدمات عالية الجودة مع ضمانات محدودة:
-• ضمان عمل المشروع وفقاً للمواصفات المتفق عليها
-• دعم فني مجاني لمدة 3 أشهر بعد التسليم
-• مسؤولية محدودة بقيمة المشروع المتفق عليها
-• عدم ضمان عدم وجود أخطاء برمجية</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>إنهاء الخدمة</label>
-              <textarea id="termsTermination" class="form-control" rows="5">يمكن إنهاء الخدمة من قبل أي من الطرفين:
-• بإشعار مسبق كتابي لمدة 30 يوماً
-• في حالة عدم الالتزام بالشروط
-• تسوية المدفوعات والالتزامات المتبقية
-• تسليم العمل المنجز حتى تاريخ الإنهاء</textarea>
-            </div>
-            
-            <div class="form-group">
-              <label>القانون المطبق وحل النزاعات</label>
-              <textarea id="termsLaw" class="form-control" rows="4">تخضع هذه الشروط لقانون فلسطين ويتم حل النزاعات من خلال:
-• المحادثات الودية والتفاوض المباشر
-• الوساطة من قبل طرف محايد
-• المحاكم المختصة في فلسطين</textarea>
-            </div>
-          </div>
-          
-          <div class="form-actions">
-            <button class="btn btn-primary" onclick="updatePolicies()">
-              <i class="fas fa-save"></i>
-              حفظ التغييرات
-            </button>
-            <button class="btn btn-secondary" onclick="resetPolicies()">
-              <i class="fas fa-undo"></i>
-              إعادة تعيين
-            </button>
-          </div>
-        </div>
-      </section>
+
 
       <!-- Contact Section -->
       <section id="contact" class="dashboard-section">
@@ -727,6 +553,67 @@
               حفظ التغييرات
             </button>
             <button class="btn btn-secondary" onclick="resetContact()">
+              <i class="fas fa-undo"></i>
+              إعادة تعيين
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <section id="footer" class="dashboard-section">
+        <div class="section-header">
+          <h2>إدارة التذييل</h2>
+          <p>تحديث محتوى تذييل الموقع</p>
+        </div>
+        
+        <div class="content-editor">
+          <div class="form-group">
+            <label>عنوان "تابعونا"</label>
+            <input type="text" id="footerFollowTitle" class="form-control" value="تابعونا">
+          </div>
+          
+          <div class="form-group">
+            <label>رابط GitHub</label>
+            <input type="url" id="footerGithub" class="form-control" value="https://github.com">
+          </div>
+          
+          <div class="form-group">
+            <label>رابط Facebook</label>
+            <input type="url" id="footerFacebook" class="form-control" value="https://facebook.com">
+          </div>
+          
+          <div class="form-group">
+            <label>رابط Instagram</label>
+            <input type="url" id="footerInstagram" class="form-control" value="https://instagram.com">
+          </div>
+          
+          <div class="form-group">
+            <label>رابط LinkedIn</label>
+            <input type="url" id="footerLinkedin" class="form-control" value="https://linkedin.com">
+          </div>
+          
+          <div class="form-group">
+            <label>نص حقوق النشر</label>
+            <input type="text" id="footerCopyright" class="form-control" value="© 2025 شركة كرمل. جميع الحقوق محفوظة.">
+          </div>
+          
+          <div class="form-group">
+            <label>رابط سياسة الخصوصية</label>
+            <input type="url" id="footerPrivacy" class="form-control" value="#">
+          </div>
+          
+          <div class="form-group">
+            <label>رابط الشروط والأحكام</label>
+            <input type="url" id="footerTerms" class="form-control" value="#">
+          </div>
+          
+          <div class="form-actions">
+            <button class="btn btn-primary" onclick="updateFooter()">
+              <i class="fas fa-save"></i>
+              حفظ التغييرات
+            </button>
+            <button class="btn btn-secondary" onclick="resetFooter()">
               <i class="fas fa-undo"></i>
               إعادة تعيين
             </button>
